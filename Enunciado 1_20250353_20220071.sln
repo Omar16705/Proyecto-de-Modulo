@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vistas", "Sistema de inventario\Vistas.csproj", "{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelos", "Modelos\Modelos.csproj", "{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05EAFF92-15B1-4916-9163-974DDFA524B7}
+	EndGlobalSection
+EndGlobal

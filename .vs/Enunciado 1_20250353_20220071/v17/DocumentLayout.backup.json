@@ -1,0 +1,170 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}|Modelos\\Modelos.csproj|c:\\users\\estudiante\\desktop\\enunciado 1_20250353_20220071\\modelos\\entidades\\verificarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\verificarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\estudiante\\desktop\\enunciado 1_20250353_20220071\\sistema de inventario\\formularios\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\formularios\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\estudiante\\desktop\\enunciado 1_20250353_20220071\\sistema de inventario\\formularios\\frminiciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\formularios\\frminiciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\estudiante\\desktop\\enunciado 1_20250353_20220071\\sistema de inventario\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\estudiante\\desktop\\enunciado 1_20250353_20220071\\sistema de inventario\\formularios\\frminiciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\formularios\\frminiciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\estudiante\\desktop\\enunciado 1_20250353_20220071\\sistema de inventario\\formularios\\frmregistrarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\formularios\\frmregistrarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\estudiante\\desktop\\enunciado 1_20250353_20220071\\sistema de inventario\\formularios\\frmregistrarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\formularios\\frmregistrarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}|Modelos\\Modelos.csproj|c:\\users\\estudiante\\desktop\\enunciado 1_20250353_20220071\\modelos\\entidades\\roles_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\roles_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}|Modelos\\Modelos.csproj|c:\\users\\estudiante\\desktop\\enunciado 1_20250353_20220071\\modelos\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Sistema de inventario\\Program.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\Program.cs",
+              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Sistema de inventario\\Program.cs",
+              "RelativeToolTip": "Sistema de inventario\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T21:23:57.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmInicioSesion.cs",
+              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Sistema de inventario\\Formularios\\frmInicioSesion.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmInicioSesion.cs",
+              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Sistema de inventario\\Formularios\\frmInicioSesion.cs",
+              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmInicioSesion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T21:22:59.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmDashboard.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Sistema de inventario\\Formularios\\frmDashboard.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmDashboard.cs",
+              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Sistema de inventario\\Formularios\\frmDashboard.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmDashboard.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T21:22:16.647Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VerificarUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Modelos\\Entidades\\VerificarUsuario.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\VerificarUsuario.cs",
+              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Modelos\\Entidades\\VerificarUsuario.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\VerificarUsuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T21:16:07.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Modelos\\Entidades\\Usuario.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Modelos\\Entidades\\Usuario.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAACHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:53:15.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Roles_Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Modelos\\Entidades\\Roles_Usuario.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Roles_Usuario.cs",
+              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Modelos\\Entidades\\Roles_Usuario.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Roles_Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T20:56:28.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmRegistrarUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Sistema de inventario\\Formularios\\frmRegistrarUsuario.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmRegistrarUsuario.cs",
+              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Sistema de inventario\\Formularios\\frmRegistrarUsuario.cs",
+              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmRegistrarUsuario.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAvwBsAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T20:53:01.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmRegistrarUsuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Sistema de inventario\\Formularios\\frmRegistrarUsuario.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmRegistrarUsuario.cs",
+              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Sistema de inventario\\Formularios\\frmRegistrarUsuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmRegistrarUsuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:53:05.589Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmInicioSesion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Sistema de inventario\\Formularios\\frmInicioSesion.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmInicioSesion.cs",
+              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\Enunciado 1_20250353_20220071\\Sistema de inventario\\Formularios\\frmInicioSesion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmInicioSesion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T20:43:58.413Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
