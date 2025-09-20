@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema_de_inventario.Formularios
+namespace Sistema_de_inventario.UserControls
 {
-    public partial class frmRegistrarUsuario : Form
+    public partial class frmRegistrar : UserControl
     {
-        public frmRegistrarUsuario()
+        public frmRegistrar()
         {
             InitializeComponent();
         }
@@ -29,6 +29,11 @@ namespace Sistema_de_inventario.Formularios
             usuario.InsertarUsuario();
         }
 
+        private void frmRegistrar_Load(object sender, EventArgs e)
+        {
+            MostrarRol();
+        }
+
         private void MostrarRol()
         {
             var dato = Roles_Usuario.ObtenerDatosRoles();
@@ -36,12 +41,7 @@ namespace Sistema_de_inventario.Formularios
             cmbRol.DataSource = dato["ROL"];
             cmbRol.DisplayMember = "NombreRol";
             cmbRol.ValueMember = "idRol";
-             cmbRol.SelectedIndex = -1;
-        }
-
-        private void frmRegistrarUsuario_Load(object sender, EventArgs e)
-        { 
-            MostrarRol();
+            cmbRol.SelectedIndex = -1;
         }
     }
 }

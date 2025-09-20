@@ -15,3 +15,20 @@ C:\Users\Estudiante\Desktop\Enunciado 1_20250353_20220071\Modelos\obj\Debug\Mode
 C:\Users\Estudiante\Desktop\Enunciado 1_20250353_20220071\Modelos\obj\Debug\Modelos.csproj.Up2Date
 C:\Users\Estudiante\Desktop\Enunciado 1_20250353_20220071\Modelos\obj\Debug\Modelos.dll
 C:\Users\Estudiante\Desktop\Enunciado 1_20250353_20220071\Modelos\obj\Debug\Modelos.pdb
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\bin\Debug\Modelos.dll
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\bin\Debug\Modelos.pdb
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\bin\Debug\System.Buffers.dll
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\bin\Debug\System.Memory.dll
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\bin\Debug\System.Buffers.xml
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\bin\Debug\System.Memory.xml
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\obj\Debug\Modelos.csproj.Up2Date
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\obj\Debug\Modelos.dll
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Modelos\obj\Debug\Modelos.pdb

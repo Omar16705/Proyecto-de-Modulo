@@ -11,7 +11,7 @@ namespace Modelos.Conexion_DB
     public class Conexion
     {
 
-        private static string servidor = "LAB03-DS-EQ15\\SQLEXPRESS";
+        private static string servidor = "DESKTOP-R09HVAC\\SQLEXPRESS";
         public static string database = "Sistema_de_Inventario";
 
 
@@ -25,7 +25,7 @@ namespace Modelos.Conexion_DB
             }
             catch( Exception ex ) 
             {
-                MessageBox.Show("Hubo error con la conexion con la base de dartpo"+ex);
+                MessageBox.Show("Hubo error con la conexion con la base de datos"+ex);
                 return null;
             }
 

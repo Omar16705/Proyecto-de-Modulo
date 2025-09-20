@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Modelos.Entidades;
+using Sistema_de_inventario.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,94 @@ namespace Sistema_de_inventario.Formularios
         public frmDashboard()
         {
             InitializeComponent();
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+            NivelUsuario();
+        }
+
+
+
+        #region "Metodo para pintar fomrularios"
+
+        private Form activarForm = null;
+
+        //Creando el metodo que me va  a permitir activar los formularios
+
+        private void AbrirForms(Form formularioPintar)
+        {
+            if (activarForm != null)
+            {
+                activarForm.Close();
+            }
+            //
+
+            activarForm = formularioPintar;
+
+            formularioPintar.TopLevel = false;
+            formularioPintar.FormBorderStyle = FormBorderStyle.None;
+
+            formularioPintar.Dock = DockStyle.Fill;
+
+            pnlCentral.Controls.Add(formularioPintar);
+            formularioPintar.BringToFront();
+            formularioPintar.Show();
+
+
+        }
+
+
+
+
+
+
+        #endregion
+
+        private void NivelUsuario() {
+        
+
+           switch(VerificarUsuario.Rol)
+            {
+                case "Administrador":
+                    // Admin
+                   lblUserConnet.Text = VerificarUsuario.Nombre_usuario;
+                    lblNivelUsuario.Text = VerificarUsuario.Rol;
+                    break;
+                case "Vendedor":
+                    // Vendedor
+                    lblUserConnet.Text = VerificarUsuario.Nombre_usuario;
+                    lblNivelUsuario.Text = VerificarUsuario.Rol;
+
+                    break;
+                    case "Almacenista":
+                    // Invitado
+                    lblUserConnet.Text = VerificarUsuario.Nombre_usuario;
+                    lblNivelUsuario.Text = VerificarUsuario.Rol;
+                    break;
+
+            }
+        }
+
+        private void btnGestionProductos_Click(object sender, EventArgs e)
+        {
+            pnlCentral.Controls.Clear();
+           pnlCentral.Controls.Add(new frmGestionProductos());  
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void pnlCentral_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

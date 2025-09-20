@@ -1,4 +1,5 @@
 ﻿using Modelos.Entidades;
+using Sistema_de_inventario.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,18 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sistema_de_inventario.Formularios
+namespace Sistema_de_inventario.UserControls
 {
-    public partial class frmInicioSesion : Form
+    public partial class frmIniciar : UserControl
     {
-        public frmInicioSesion()
+        public frmIniciar()
         {
             InitializeComponent();
-        }
-
-        private void pnlRegistraroIniciarSesion_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
@@ -40,7 +36,7 @@ namespace Sistema_de_inventario.Formularios
                 if (accesoValido)
                 {
                     // Login exitoso
-
+                    
                     MessageBox.Show("Bienvenido al Sistema", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     // Aquí puedes redirigir a la pantalla principal
@@ -69,7 +65,6 @@ namespace Sistema_de_inventario.Formularios
                                MessageBoxButtons.OK,
                                MessageBoxIcon.Error);
             }
-
         }
     }
 }
