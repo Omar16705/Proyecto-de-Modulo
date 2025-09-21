@@ -106,5 +106,32 @@ namespace Sistema_de_inventario.Formularios
         {
 
         }
+
+        private void btnGestionProveedores_Click(object sender, EventArgs e)
+        {
+            pnlCentral.Controls.Clear();
+            pnlCentral.Controls.Add(new frmGestionProveedores());
+        }
+
+        private void btnGestionUsuarios_Click(object sender, EventArgs e)
+        {
+            pnlCentral.Controls.Clear();
+            pnlCentral.Controls.Add(new frmRegistrar());
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            DialogResult opcionSeleccionada = MessageBox.Show("¿Quieres salir?", "Cerrando Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (opcionSeleccionada == DialogResult.Yes)
+            {
+                this.Close(); // Cerramos el dashboard
+                frmLogin.InstanciaLogin.Show(); // Mostramos el formulario de login
+
+
+
+
+            }
+        }
     }
 }

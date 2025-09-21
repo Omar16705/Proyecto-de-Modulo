@@ -269,6 +269,7 @@
             // 
             // dgvVerProductos
             // 
+            this.dgvVerProductos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvVerProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVerProductos.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvVerProductos.Location = new System.Drawing.Point(0, 291);

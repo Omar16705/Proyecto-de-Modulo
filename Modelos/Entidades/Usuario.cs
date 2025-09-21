@@ -29,30 +29,79 @@ namespace Modelos.Entidades
         public int IdRol1 { get => IdRol; set => IdRol = value; }
 
 
-        public bool InsertarUsuario()
+
+        public static DataSet MostrarUsuarios()
         {
             try
             {
                 SqlConnection conexion = Conexion.conectar();
                 conexion.Open();
-                string query = "insert into USUARIOS(NombreCompletoUsuario, correoUsuario, Clave, rol_id) values (@NombreCompletoUsuario, @CorreoElectronico, @Clave, @IdRol); ";
-                SqlCommand cmd = new SqlCommand(query, conexion);
-                cmd.Parameters.AddWithValue("@NombreCompletoUsuario",NombreCompletoUsuario1);
-                cmd.Parameters.AddWithValue("@CorreoElectronico", CorrreoElectronico1);
-                cmd.Parameters.AddWithValue("@Clave", Clave1);
-                cmd.Parameters.AddWithValue("@IdRol", IdRol1);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Se ha registrado el Usuario");
+                string query = "select * from Usuarios";
+                SqlDataAdapter da = new SqlDataAdapter(query, conexion);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "USUARIOS");
+                conexion.Close();
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex);
+                return null;
+            }
+        }
+
+        public bool InsertarUsuario()
+        {
+            try
+            {
+                using (SqlConnection conexion = Conexion.conectar())
+                {
+                    conexion.Open();
+                    string query = @"INSERT INTO USUARIOS
+                (NombreCompletoUsuario, correoUsuario, Clave, rol_id) 
+                VALUES (@NombreCompletoUsuario, @CorreoElectronico, @Clave, @IdRol)";
+
+                    SqlCommand cmd = new SqlCommand(query, conexion);
+                    cmd.Parameters.AddWithValue("@NombreCompletoUsuario", NombreCompletoUsuario1);
+                    cmd.Parameters.AddWithValue("@CorreoElectronico", CorrreoElectronico1);
+                    cmd.Parameters.AddWithValue("@Clave", Clave1);
+                    cmd.Parameters.AddWithValue("@IdRol", IdRol1);
+
+                    cmd.ExecuteNonQuery();
+
+                    //  Mensaje dinámico según el rol asignado
+                    string mensaje;
+                    switch (IdRol1)
+                    {
+                        case 1: // Administrador
+                            mensaje = "Se ha insertado un ADMINISTRADOR con acceso completo al sistema.";
+                            break;
+
+                        case 2: // Vendedor
+                            mensaje = "Se ha insertado un VENDEDOR con permiso de registrar ventas dentro del sistema.";
+                            break;
+
+                        case 3: // Almacenista
+                            mensaje = "Se ha insertado un ALMACENISTA con permiso de gestionar el inventario.";
+                            break;
+
+                        default:
+                            mensaje = "Se ha insertado un usuario con rol no definido en el sistema.";
+                            break;
+                    }
+
+
+                    MessageBox.Show(mensaje, "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 return true;
             }
-            catch (Exception ex) 
-            { 
-                MessageBox.Show("Ha ocurrido un error"+ex);
-            return false;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+                return false;
             }
-
-
         }
+
 
 
 
@@ -117,7 +166,49 @@ namespace Modelos.Entidades
         }
 
 
+        public bool EliminarUsuario()
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.conectar();
+                conexion.Open();
+                string query = "delete from USUARIOS where idUsuario = @IdUsuario";
+                SqlCommand cmd = new SqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@IdUsuario", IdUsuario1);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Se ha eliminado el Usuario");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex);
+                return false;
+            }
+        }
 
+        public bool ActualizarUsuario()
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.conectar();
+                conexion.Open();
+                string query = "update USUARIOS set NombreCompletoUsuario = @NombreCompletoUsuario, correoUsuario = @CorreoElectronico, rol_id = @IdRol where idUsuario = @IdUsuario";
+                SqlCommand cmd = new SqlCommand(query, conexion);
+                cmd.Parameters.AddWithValue("@IdUsuario", IdUsuario1);
+                cmd.Parameters.AddWithValue("@NombreCompletoUsuario", NombreCompletoUsuario1);
+                cmd.Parameters.AddWithValue("@CorreoElectronico", CorrreoElectronico1);
+ 
+                cmd.Parameters.AddWithValue("@IdRol", IdRol1);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Se ha actualizado el Usuario");
 
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex);
+                return false;
+            }
+        }
     }
 }

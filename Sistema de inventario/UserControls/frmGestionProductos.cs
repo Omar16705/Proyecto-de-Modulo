@@ -1,4 +1,4 @@
-﻿using CapaNegocio.Entidades_Negocio;
+﻿
 using Modelos.Entidades;
 using System;
 using System.Collections.Generic;
@@ -25,7 +25,7 @@ namespace Sistema_de_inventario.UserControls
         }
 
         Productos Productos = new Productos();
-       Productos_Veriricar Productos_Veriricar = new Productos_Veriricar();
+     
         private void frmGestionProductos_Load(object sender, EventArgs e)
         {
             VerDatagriv();
@@ -35,7 +35,7 @@ namespace Sistema_de_inventario.UserControls
 
         private void VerDatagriv()
         {
-            dgvVerProductos.DataSource = Productos_Veriricar.ListarProductos();
+            dgvVerProductos.DataSource = Productos.ObtenerProductos();
         }
 
         private void ConfigurarDataGridView()
@@ -91,20 +91,19 @@ namespace Sistema_de_inventario.UserControls
 
         }
 
-        Proveedor_Verificar Proveedor_Verificar = new Proveedor_Verificar();
-        Categoria_Verificar Categoria_Verificar = new Categoria_Verificar();
-
+        Proveedores Proveedores = new Proveedores();
+        Categoria Categoria = new Categoria();
         private void MostrarComboBox()
         {
             cbmProveedor.DataSource = null;
-            cbmProveedor.DataSource = Proveedor_Verificar.ListarProveedores();
+            cbmProveedor.DataSource = Proveedores.ObtenerDatosProveedores();
             cbmProveedor.DisplayMember = "NombreProveedor";
             cbmProveedor.ValueMember = "idProveedor";
             cbmProveedor.SelectedIndex = -1;
 
 
             cmbCategoria.DataSource = null;
-            cmbCategoria.DataSource = Categoria_Verificar.ListarCategoria();
+            cmbCategoria.DataSource = Categoria.ObtenerDatosCategoria();
             cmbCategoria.DisplayMember = "NombreCategoria";
             cmbCategoria.ValueMember = "idCategoria";
             cmbCategoria.SelectedIndex = -1;

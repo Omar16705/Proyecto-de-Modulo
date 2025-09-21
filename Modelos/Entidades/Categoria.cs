@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Modelos.Entidades
 {
@@ -16,18 +17,23 @@ namespace Modelos.Entidades
 
         public static DataTable ObtenerDatosCategoria()
         {
+            try
+            {
 
+                SqlConnection conexion = Conexion.conectar();
+                string consultaQuery = "select idCategoria,NombreCategoria from Categoria";
+                SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
+                DataTable data = new DataTable();
+                add.Fill(data);
+                return data;
 
-            SqlConnection conexion = Conexion.conectar();
-            string consultaQuery = "select idCategoria,NombreCategoria from Categoria";
-            SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
-            DataTable data = new DataTable();
-            add.Fill(data);
-            return data;
-
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+                return null;
+            }
         }
-
 
     }
 }

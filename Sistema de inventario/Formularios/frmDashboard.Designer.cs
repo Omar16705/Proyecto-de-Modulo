@@ -28,23 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.label1 = new System.Windows.Forms.Label();
             this.pnlNavegacion = new System.Windows.Forms.Panel();
+            this.btnGestionUsuarios = new System.Windows.Forms.Button();
+            this.btnGestionProveedores = new System.Windows.Forms.Button();
+            this.btnGestionProductos = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlCentral = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.lblUserConnet = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.lblNivelUsuario = new System.Windows.Forms.ToolStripLabel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnGestionProductos = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pnlNavegacion.SuspendLayout();
             this.pnlLogo.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +67,9 @@
             this.pnlNavegacion.AutoScrollMargin = new System.Drawing.Size(2, 2);
             this.pnlNavegacion.AutoScrollMinSize = new System.Drawing.Size(0, 2000);
             this.pnlNavegacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(77)))), ((int)(((byte)(86)))));
+            this.pnlNavegacion.Controls.Add(this.btnCerrarSesion);
+            this.pnlNavegacion.Controls.Add(this.btnGestionUsuarios);
+            this.pnlNavegacion.Controls.Add(this.btnGestionProveedores);
             this.pnlNavegacion.Controls.Add(this.btnGestionProductos);
             this.pnlNavegacion.Controls.Add(this.pnlLogo);
             this.pnlNavegacion.Dock = System.Windows.Forms.DockStyle.Left;
@@ -70,6 +77,54 @@
             this.pnlNavegacion.Name = "pnlNavegacion";
             this.pnlNavegacion.Size = new System.Drawing.Size(260, 561);
             this.pnlNavegacion.TabIndex = 1;
+            // 
+            // btnGestionUsuarios
+            // 
+            this.btnGestionUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGestionUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnGestionUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionUsuarios.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionUsuarios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnGestionUsuarios.Location = new System.Drawing.Point(0, 314);
+            this.btnGestionUsuarios.Name = "btnGestionUsuarios";
+            this.btnGestionUsuarios.Size = new System.Drawing.Size(243, 54);
+            this.btnGestionUsuarios.TabIndex = 4;
+            this.btnGestionUsuarios.Text = "Gestion de Usuarios";
+            this.btnGestionUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestionUsuarios.UseVisualStyleBackColor = true;
+            this.btnGestionUsuarios.Click += new System.EventHandler(this.btnGestionUsuarios_Click);
+            // 
+            // btnGestionProveedores
+            // 
+            this.btnGestionProveedores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGestionProveedores.FlatAppearance.BorderSize = 0;
+            this.btnGestionProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionProveedores.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionProveedores.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnGestionProveedores.Location = new System.Drawing.Point(0, 260);
+            this.btnGestionProveedores.Name = "btnGestionProveedores";
+            this.btnGestionProveedores.Size = new System.Drawing.Size(243, 54);
+            this.btnGestionProveedores.TabIndex = 3;
+            this.btnGestionProveedores.Text = "Gestion de Proveedores";
+            this.btnGestionProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestionProveedores.UseVisualStyleBackColor = true;
+            this.btnGestionProveedores.Click += new System.EventHandler(this.btnGestionProveedores_Click);
+            // 
+            // btnGestionProductos
+            // 
+            this.btnGestionProductos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGestionProductos.FlatAppearance.BorderSize = 0;
+            this.btnGestionProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionProductos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionProductos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnGestionProductos.Location = new System.Drawing.Point(0, 206);
+            this.btnGestionProductos.Name = "btnGestionProductos";
+            this.btnGestionProductos.Size = new System.Drawing.Size(243, 54);
+            this.btnGestionProductos.TabIndex = 2;
+            this.btnGestionProductos.Text = "Gestion de Productos";
+            this.btnGestionProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestionProductos.UseVisualStyleBackColor = true;
+            this.btnGestionProductos.Click += new System.EventHandler(this.btnGestionProductos_Click);
             // 
             // pnlLogo
             // 
@@ -80,6 +135,27 @@
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(243, 206);
             this.pnlLogo.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(26, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(180, 21);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Sistema de Inventario";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Sistema_de_inventario.Properties.Resources.lista;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 53);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 143);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // pnlCentral
             // 
@@ -131,43 +207,6 @@
             this.lblNivelUsuario.Size = new System.Drawing.Size(13, 22);
             this.lblNivelUsuario.Text = ".";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(26, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Sistema de Inventario";
-            // 
-            // btnGestionProductos
-            // 
-            this.btnGestionProductos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGestionProductos.FlatAppearance.BorderSize = 0;
-            this.btnGestionProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGestionProductos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionProductos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnGestionProductos.Location = new System.Drawing.Point(0, 206);
-            this.btnGestionProductos.Name = "btnGestionProductos";
-            this.btnGestionProductos.Size = new System.Drawing.Size(243, 54);
-            this.btnGestionProductos.TabIndex = 2;
-            this.btnGestionProductos.Text = "Gestion de Productos";
-            this.btnGestionProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestionProductos.UseVisualStyleBackColor = true;
-            this.btnGestionProductos.Click += new System.EventHandler(this.btnGestionProductos_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Sistema_de_inventario.Properties.Resources.lista;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 53);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 143);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.toolStrip1);
@@ -176,6 +215,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(874, 25);
             this.panel2.TabIndex = 3;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 2002);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(243, 54);
+            this.btnCerrarSesion.TabIndex = 5;
+            this.btnCerrarSesion.Text = "Cerrar Sesion";
+            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // frmDashboard
             // 
@@ -186,16 +241,18 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlNavegacion);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDashboard";
+            this.Text = "Dashboard-Usuario";
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.pnlNavegacion.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -218,5 +275,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnGestionProductos;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnGestionProveedores;
+        private System.Windows.Forms.Button btnGestionUsuarios;
+        private System.Windows.Forms.Button btnCerrarSesion;
     }
 }
