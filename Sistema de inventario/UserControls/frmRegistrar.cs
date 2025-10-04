@@ -140,7 +140,7 @@ namespace Sistema_de_inventario.UserControls
         {
             txtNombreUsuario.Text = dgvVerUsuarios.CurrentRow.Cells["NombreCompletoUsuario"].Value.ToString();
             txtCorreoElectronico.Text = dgvVerUsuarios.CurrentRow.Cells["correoUsuario"].Value.ToString();
-            cmbRol.SelectedValue = dgvVerUsuarios.CurrentRow.Cells["idRol"].Value;
+            cmbRol.SelectedValue = dgvVerUsuarios.CurrentRow.Cells["rol_id"].Value;
         }
     }
 }

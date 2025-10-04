@@ -1,4 +1,5 @@
 ﻿using Sistema_de_inventario.Formularios;
+using Sistema_de_inventario.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;

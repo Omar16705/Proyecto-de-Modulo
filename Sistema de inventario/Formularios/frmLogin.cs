@@ -42,6 +42,32 @@ namespace Sistema_de_inventario.Formularios
         {
             try
             {
+
+
+                if (string.IsNullOrWhiteSpace(txtClave.Text) || (string.IsNullOrWhiteSpace(txtUsuario.Text)))
+                {
+                    MessageBox.Show("Ingresa tus credenciales en los campos asignados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+
+                if (string.IsNullOrWhiteSpace(txtUsuario.Text)) {
+
+                    MessageBox.Show("Ingresa el usuario en el campo asignado","Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                
+                }
+
+
+                if (string.IsNullOrWhiteSpace(txtClave.Text)) {
+
+
+                    MessageBox.Show("Ingresa la clave en el campo asignado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+
+              
+
+
+
                 // Crear instancia de usuario
                 Usuario usuarioLogin = new Usuario
                 {
@@ -95,6 +121,16 @@ namespace Sistema_de_inventario.Formularios
         {
             frmRestablecerClave frmRestablecerClave = new frmRestablecerClave();
             frmRestablecerClave.ShowDialog();
+        }
+
+        private void btnVerClave_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtClave.PasswordChar = '*';
+        }
+
+        private void btnVerClave_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtClave.PasswordChar = '\0';
         }
     }
 }

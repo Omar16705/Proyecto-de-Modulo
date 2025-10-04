@@ -28,6 +28,85 @@ namespace Modelos.Entidades
         public string Clave1 { get => Clave; set => Clave = value; }
         public int IdRol1 { get => IdRol; set => IdRol = value; }
 
+        public bool UsuarioExiste(string username)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(username))
+                {
+                    return false;
+                }
+
+                SqlConnection conn = Conexion.conectar();
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(1) FROM Usuarios WHERE NombreCompletoUsuario = @user", conn);
+
+                cmd.Parameters.Add("@user", SqlDbType.NVarChar, 100).Value = username.Trim();
+                conn.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al verificar el usuario: " + ex.Message);
+                return false;
+            }
+        }
+
+        public bool RestablecerPassword(string username, string nuevaPassword)
+        {
+            try
+            {
+
+
+                if (string.IsNullOrWhiteSpace(username))
+                {
+
+                    return false;
+                }
+
+                string hash = BCrypt.Net.BCrypt.HashPassword(nuevaPassword);
+
+                SqlConnection conn = Conexion.conectar();
+                SqlCommand cmd = new SqlCommand("update Usuarios set Clave = @hash where NombreCompletoUsuario = @user", conn);
+
+                cmd.Parameters.Add("@hash", SqlDbType.NVarChar, 255).Value = hash;
+                cmd.Parameters.Add("@user", SqlDbType.NVarChar, 100).Value = username.Trim();
+                conn.Open();
+                int rows = cmd.ExecuteNonQuery();
+                MessageBox.Show($"Se ha restablecido la contraseña -> Usuario: {rows}");
+                return rows > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al restablecer la contraseña: " + ex.Message);
+                return false;
+            }
+
+        }
+
+
+
+
+        public static DataSet MostrarUsuariosActualizar()
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.conectar();
+                conexion.Open();
+                string query = "select NombreCompletoUsuario, correoUsuario, Clave, rol_id from Usuarios";
+                SqlDataAdapter da = new SqlDataAdapter(query, conexion);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "USUARIOS");
+                conexion.Close();
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex);
+                return null;
+            }
+        }
+
 
 
         public static DataSet MostrarUsuarios()
@@ -194,11 +273,12 @@ namespace Modelos.Entidades
                 conexion.Open();
                 string query = "update USUARIOS set NombreCompletoUsuario = @NombreCompletoUsuario, correoUsuario = @CorreoElectronico, rol_id = @IdRol where idUsuario = @IdUsuario";
                 SqlCommand cmd = new SqlCommand(query, conexion);
-                cmd.Parameters.AddWithValue("@IdUsuario", IdUsuario1);
+                
                 cmd.Parameters.AddWithValue("@NombreCompletoUsuario", NombreCompletoUsuario1);
                 cmd.Parameters.AddWithValue("@CorreoElectronico", CorrreoElectronico1);
  
                 cmd.Parameters.AddWithValue("@IdRol", IdRol1);
+                cmd.Parameters.AddWithValue("@IdUsuario", IdUsuario1);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Se ha actualizado el Usuario");
 
@@ -210,5 +290,28 @@ namespace Modelos.Entidades
                 return false;
             }
         }
+
+
+
+        public static DataTable mostrarusurioscmb()
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.conectar();
+                conexion.Open();
+                string query = "select idUsuario, NombreCompletoUsuario from USUARIOS";
+                SqlDataAdapter da = new SqlDataAdapter(query, conexion);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                conexion.Close();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex);
+                return null;
+            }
+        }
+
     }
 }

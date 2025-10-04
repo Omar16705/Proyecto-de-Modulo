@@ -36,7 +36,7 @@ namespace Modelos.Entidades
             {
                 using (SqlConnection conn = Conexion.conectar())
                 {
-                    string query = "SELECT * FROM Productos";
+                    string query = "select idProducto as 'ID Producto', CodigoProducto as 'Codigo Producto', NombreProducto as 'Nombre del Producto', categoria_id as 'ID Categoria', Proveedor_id as 'ID Proveedor', Stock, PrecioCompra as 'Precio de Compra', PrecioVenta as 'Precio de Venta' from Productos";
                     SqlDataAdapter da = new SqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
@@ -141,6 +141,29 @@ namespace Modelos.Entidades
             catch (Exception ex)
             {
                 MessageBox.Show("Error al eliminar producto: " + ex.Message);
+            }
+        }
+
+
+
+
+        public static DataTable MostrarProductosCMB()
+        {
+            try
+            {
+                using (SqlConnection conn = Conexion.conectar())
+                {
+                    string query = "SELECT idProducto, NombreProducto FROM Productos";
+                    SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+                return null;
             }
         }
 

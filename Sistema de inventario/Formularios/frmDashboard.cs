@@ -78,12 +78,18 @@ namespace Sistema_de_inventario.Formularios
                     break;
                 case "Vendedor":
                     // Vendedor
+                    btnGestionUsuarios.Visible = false;
+                    btnGestionProveedores.Visible = false;
+                    btnGestionProductos.Visible = false;
                     lblUserConnet.Text = VerificarUsuario.Nombre_usuario;
                     lblNivelUsuario.Text = VerificarUsuario.Rol;
 
                     break;
                     case "Almacenista":
-                    // Invitado
+                    // Almacenista
+                    btnGestionUsuarios.Visible = false;
+                    btnGestionProveedores.Visible = false;
+                    btnGestionVentas.Visible = false;
                     lblUserConnet.Text = VerificarUsuario.Nombre_usuario;
                     lblNivelUsuario.Text = VerificarUsuario.Rol;
                     break;
@@ -132,6 +138,18 @@ namespace Sistema_de_inventario.Formularios
 
 
             }
+        }
+
+        private void btnGestionVentas_Click(object sender, EventArgs e)
+        {
+            pnlCentral.Controls.Clear();    
+            pnlCentral.Controls.Add(new frmGestionVentas());
+        }
+
+        private void btnGestionInventario_Click(object sender, EventArgs e)
+        {
+            pnlCentral.Controls.Clear();
+            pnlCentral.Controls.Add(new frmGestionInventario());
         }
     }
 }

@@ -53,3 +53,5 @@ C:\Users\omara\Desktop\Proyecto-de-Modulo\Sistema de inventario\obj\Debug\Sistem
 C:\Users\omara\Desktop\Proyecto-de-Modulo\Sistema de inventario\obj\Debug\Sistema_de_inventario.UserControls.frmGestionUsuarios.resources
 C:\Users\omara\Desktop\Proyecto-de-Modulo\Sistema de inventario\obj\Debug\Sistema_de_inventario.Formularios.frmLogin.resources
 C:\Users\omara\Desktop\Proyecto-de-Modulo\Sistema de inventario\obj\Debug\Sistema_de_inventario.Formularios.frmRestablecerClave.resources
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Sistema de inventario\obj\Debug\Sistema_de_inventario.UserControls.frmGestionVentas.resources
+C:\Users\omara\Desktop\Proyecto-de-Modulo\Sistema de inventario\obj\Debug\Sistema_de_inventario.UserControls.frmGestionInventario.resources

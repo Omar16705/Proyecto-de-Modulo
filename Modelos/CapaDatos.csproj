@@ -63,7 +63,9 @@
     <Compile Include="Entidades\Productos.cs" />
     <Compile Include="Entidades\Proveedores.cs" />
     <Compile Include="Entidades\Roles_Usuario.cs" />
+    <Compile Include="Entidades\TipoDocumento.cs" />
     <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Entidades\Ventas.cs" />
     <Compile Include="Entidades\VerificarUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
