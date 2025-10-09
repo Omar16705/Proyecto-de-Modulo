@@ -205,6 +205,7 @@
             this.ClientSize = new System.Drawing.Size(744, 412);
             this.Controls.Add(this.pnlAcciones);
             this.Controls.Add(this.pnlRegistraroIniciarSesion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

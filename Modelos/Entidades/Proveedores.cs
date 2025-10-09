@@ -18,6 +18,7 @@ namespace Modelos.Entidades
         private string nombreProveedor;
         private string correoProveedor;
         private string telefonoProveedor;
+
         public int IdProveedor { get => idProveedor; set => idProveedor = value; }
         public string DocumentoProveedor { get => documentoProveedor; set => documentoProveedor = value; }
         public string NombreProveedor { get => nombreProveedor; set => nombreProveedor = value; }

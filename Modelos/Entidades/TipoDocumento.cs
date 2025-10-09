@@ -33,7 +33,7 @@ namespace Modelos.Entidades
                     return dt;
                 }
             }
-            catch (Exception)
+            catch (Exception )
             {
                 throw;
             }

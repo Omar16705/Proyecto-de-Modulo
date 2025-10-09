@@ -47,6 +47,7 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.lblNivelUsuario = new System.Windows.Forms.ToolStripLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.pnlNavegacion.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -193,7 +194,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(26, 13);
+            this.label2.Location = new System.Drawing.Point(32, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 20);
             this.label2.TabIndex = 1;
@@ -202,7 +203,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sistema_de_inventario.Properties.Resources.lista;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 53);
+            this.pictureBox1.Location = new System.Drawing.Point(27, 53);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(168, 143);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -225,6 +226,7 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.lblUserConnet,
+            this.toolStripSeparator1,
             this.toolStripLabel2,
             this.lblNivelUsuario});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -267,6 +269,11 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(880, 25);
             this.panel2.TabIndex = 3;
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // frmDashboard
             // 
@@ -316,5 +323,6 @@
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnGestionVentas;
         private System.Windows.Forms.Button btnGestionInventario;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
