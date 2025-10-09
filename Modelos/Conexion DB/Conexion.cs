@@ -11,7 +11,7 @@ namespace Modelos.Conexion_DB
     public class Conexion
     {
 
-        private static string servidor = ".\\SQLEXPRESS";
+        private static string servidor = "DESKTOP-0FOUEU1\\SQLEXPRESS";
         public static string database = "Sistema_de_Inventario";
 
 

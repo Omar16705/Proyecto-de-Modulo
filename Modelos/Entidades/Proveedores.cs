@@ -121,23 +121,28 @@ namespace Modelos.Entidades
         }
 
 
-        public void EliminarProveedor(int id)
+        public bool EliminarProveedor(int id)
         {
             try
             {
                 using (SqlConnection conn = Conexion.conectar())
                 {
-                    string query = "DELETE FROM Proveedores WHERE idProveedor=@id";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@id", id);
+                    SqlCommand cmd = new SqlCommand("EliminarProveedorCompleto", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    //  Aquí el parámetro correcto
+                    cmd.Parameters.AddWithValue("@idProveedor", id);
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
+
+                    return true; 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+                MessageBox.Show("Error al eliminar proveedor: " + ex.Message);
+                return false;
             }
         }
     }

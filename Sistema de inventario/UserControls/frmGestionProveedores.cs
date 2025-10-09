@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -85,7 +86,51 @@ namespace Sistema_de_inventario.UserControls
         {
             try
             {
-               proveedores.DocumentoProveedor = txtDocumentoProveedor.Text;
+
+                // Validar campos obligatorios
+                if (string.IsNullOrWhiteSpace(txtDocumentoProveedor.Text))
+                {
+                    MessageBox.Show("El documento del proveedor es obligatorio.");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtNombreProveedor.Text))
+                {
+                    MessageBox.Show("El nombre del proveedor es obligatorio.");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtEmailProveedor.Text))
+                {
+                    MessageBox.Show("El correo electrónico es obligatorio.");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtTelefonoProveedor.Text))
+                {
+                    MessageBox.Show("El teléfono del proveedor es obligatorio.");
+                    return;
+                }
+
+                // Validar formato de correo
+                if (!Regex.IsMatch(txtEmailProveedor.Text.Trim(), @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+                {
+                    MessageBox.Show("El correo electrónico no tiene un formato válido.");
+                    return;
+                }
+
+                // Validar teléfono (solo dígitos y longitud razonable)
+                // Validar teléfono (permitir dígitos y guiones)
+                string telefono = txtTelefonoProveedor.Text.Trim();
+                if (!Regex.IsMatch(telefono, @"^[\d\-]{8,20}$"))
+                {
+                    MessageBox.Show("El teléfono debe contener entre 8 y 20 caracteres, solo dígitos y guiones.");
+                    return;
+                }
+
+
+
+                proveedores.DocumentoProveedor = txtDocumentoProveedor.Text;
                 proveedores.NombreProveedor = txtNombreProveedor.Text;
                 proveedores.CorreoProveedor = txtEmailProveedor.Text;
                 proveedores.TelefonoProveedor = txtTelefonoProveedor.Text;
@@ -123,6 +168,48 @@ namespace Sistema_de_inventario.UserControls
         {
             try
             {
+
+                if (string.IsNullOrWhiteSpace(txtDocumentoProveedor.Text))
+                {
+                    MessageBox.Show("El documento del proveedor es obligatorio.");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtNombreProveedor.Text))
+                {
+                    MessageBox.Show("El nombre del proveedor es obligatorio.");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtEmailProveedor.Text))
+                {
+                    MessageBox.Show("El correo electrónico es obligatorio.");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtTelefonoProveedor.Text))
+                {
+                    MessageBox.Show("El teléfono del proveedor es obligatorio.");
+                    return;
+                }
+
+                // Validar formato de correo
+                if (!Regex.IsMatch(txtEmailProveedor.Text.Trim(), @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+                {
+                    MessageBox.Show("El correo electrónico no tiene un formato válido.");
+                    return;
+                }
+
+                // Validar teléfono (solo dígitos y longitud razonable)
+                // Validar teléfono (permitir dígitos y guiones)
+                string telefono = txtTelefonoProveedor.Text.Trim();
+                if (!Regex.IsMatch(telefono, @"^[\d\-]{8,20}$"))
+                {
+                    MessageBox.Show("El teléfono debe contener entre 8 y 20 caracteres, solo dígitos y guiones.");
+                    return;
+                }
+
+
                 proveedores.DocumentoProveedor = txtDocumentoProveedor.Text;
                 proveedores.NombreProveedor = txtNombreProveedor.Text;
                 proveedores.CorreoProveedor = txtEmailProveedor.Text;
@@ -140,18 +227,27 @@ namespace Sistema_de_inventario.UserControls
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
+            if (dgvVerProveedores.CurrentRow != null)
             {
-                int id = Convert.ToInt32(dgvVerProveedores.CurrentRow.Cells["idProveedor"].Value);
-                proveedores.EliminarProveedor(id);
+                int idProveedor = Convert.ToInt32(dgvVerProveedores.CurrentRow.Cells["idProveedor"].Value);
 
+                DialogResult resultado = MessageBox.Show("¿Está seguro de eliminar este proveedor y sus productos?",
+                    "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                VerDatafrid();
-                MessageBox.Show("Proveedor eliminado.");
+                if (resultado == DialogResult.Yes)
+                {
+                    bool eliminado = Proveedores.EliminarProveedor(idProveedor);
+
+                    if (eliminado)
+                    {
+                        MessageBox.Show("Proveedor y productos eliminados correctamente.");
+                        VerDatafrid(); // 🔄 Recarga el DataGridView
+                    }
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Seleccione un proveedor para eliminar.");
             }
         }
     }

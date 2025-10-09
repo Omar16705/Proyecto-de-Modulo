@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}|Modelos\\CapaDatos.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\modelos\\conexion db\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}|Modelos\\CapaDatos.csproj|solutionrelative:modelos\\conexion db\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\sistema de inventario\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\sistema de inventario\\formularios\\frmrestablecerclave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\formularios\\frmrestablecerclave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\sistema de inventario\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -19,8 +15,44 @@
       "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\formularios\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\sistema de inventario\\formularios\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\formularios\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\sistema de inventario\\usercontrols\\frmregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\sistema de inventario\\usercontrols\\frmgestionventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmgestionventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\sistema de inventario\\usercontrols\\frmgestionproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmgestionproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\sistema de inventario\\usercontrols\\frmgestionproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmgestionproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\sistema de inventario\\usercontrols\\frmgestionproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmgestionproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\sistema de inventario\\usercontrols\\frmgestioninventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmgestioninventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\sistema de inventario\\usercontrols\\frmgestionventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmgestionventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\sistema de inventario\\usercontrols\\frmregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\sistema de inventario\\usercontrols\\frmgestionproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmgestionproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\proyecto-de-modulo\\sistema de inventario\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,65 +67,163 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Conexion.cs",
-              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Modelos\\Conexion DB\\Conexion.cs",
-              "RelativeDocumentMoniker": "Modelos\\Conexion DB\\Conexion.cs",
-              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Modelos\\Conexion DB\\Conexion.cs",
-              "RelativeToolTip": "Modelos\\Conexion DB\\Conexion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "frmRestablecerClave.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\Formularios\\frmRestablecerClave.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmRestablecerClave.cs",
+              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\Formularios\\frmRestablecerClave.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmRestablecerClave.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T18:08:46.112Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\Program.cs",
-              "RelativeDocumentMoniker": "Sistema de inventario\\Program.cs",
-              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\Program.cs",
-              "RelativeToolTip": "Sistema de inventario\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T18:08:38.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmLogin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\Formularios\\frmLogin.cs",
-              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\Formularios\\frmLogin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmLogin.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T17:48:56.759Z",
+              "WhenOpened": "2025-10-09T00:26:21.78Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmDashboard.cs",
-              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\Formularios\\frmDashboard.cs",
-              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmDashboard.cs",
-              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\Formularios\\frmDashboard.cs",
-              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmDashboard.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAADgv08AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T16:54:32.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "frmDashboard.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\Formularios\\frmDashboard.cs",
               "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmDashboard.cs",
               "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\Formularios\\frmDashboard.cs [Dise\u00F1o]",
               "RelativeToolTip": "Sistema de inventario\\Formularios\\frmDashboard.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T16:54:31.269Z",
+              "WhenOpened": "2025-10-09T00:26:15.579Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmGestionProveedores.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionProveedores.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmGestionProveedores.cs",
+              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionProveedores.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmGestionProveedores.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T00:08:58.882Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmGestionVentas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionVentas.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmGestionVentas.cs",
+              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionVentas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmGestionVentas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T00:18:20.217Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmRegistrar.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmRegistrar.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmRegistrar.cs",
+              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmRegistrar.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmRegistrar.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T00:14:35.141Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmLogin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\Formularios\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\Formularios\\frmLogin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmLogin.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T23:45:13.408Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmGestionProductos.cs",
+              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionProductos.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmGestionProductos.cs",
+              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionProductos.cs",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmGestionProductos.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAuwHUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T23:48:12.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmGestionProductos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionProductos.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmGestionProductos.cs",
+              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionProductos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmGestionProductos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T23:48:09.527Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmGestionInventario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionInventario.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmGestionInventario.cs",
+              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionInventario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmGestionInventario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T23:48:06.807Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmGestionVentas.cs",
+              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionVentas.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmGestionVentas.cs",
+              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionVentas.cs",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmGestionVentas.cs",
+              "ViewState": "AgIAAAIBAAAAAAAAAAAiwDQBAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T00:18:22.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmRegistrar.cs",
+              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmRegistrar.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmRegistrar.cs",
+              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmRegistrar.cs",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmRegistrar.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAwDwAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T00:14:38.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmGestionProveedores.cs",
+              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionProveedores.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmGestionProveedores.cs",
+              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionProveedores.cs",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmGestionProveedores.cs",
+              "ViewState": "AgIAANAAAAAAAAAAAAAYwNEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T00:09:02.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\Formularios\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\omara\\Desktop\\Proyecto-de-Modulo\\Sistema de inventario\\Formularios\\frmLogin.cs",
+              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmLogin.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAkwFQAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T23:45:19.629Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,15 +21,63 @@ namespace Sistema_de_inventario.UserControls
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario();
+            try
+            {
+                // Validar campos obligatorios
+                if (string.IsNullOrWhiteSpace(txtNombreUsuario.Text))
+                {
+                    MessageBox.Show("El nombre completo es obligatorio.");
+                    return;
+                }
 
-            usuario.NombreCompletoUsuario1 = txtNombreUsuario.Text;
-            usuario.CorrreoElectronico1 = txtCorreoElectronico.Text;
-            usuario.Clave1 = BCrypt.Net.BCrypt.HashPassword(txtClave.Text);
-            usuario.IdRol1 = Convert.ToInt32(cmbRol.SelectedValue);
-         
-            usuario.InsertarUsuario();
-            VerUsuarios();
+                if (string.IsNullOrWhiteSpace(txtCorreoElectronico.Text))
+                {
+                    MessageBox.Show("El correo electrónico es obligatorio.");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtClave.Text))
+                {
+                    MessageBox.Show("La clave es obligatoria.");
+                    return;
+                }
+
+                if (cmbRol.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Debe seleccionar un rol.");
+                    return;
+                }
+
+                // Validar formato de correo
+                if (!Regex.IsMatch(txtCorreoElectronico.Text.Trim(), @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+                {
+                    MessageBox.Show("El correo electrónico no tiene un formato válido.");
+                    return;
+                }
+
+                // Validar longitud de clave
+                if (txtClave.Text.Length < 8)
+                {
+                    MessageBox.Show("La clave debe tener al menos 8 caracteres.");
+                    return;
+                }
+
+                // Crear y asignar usuario
+                Usuario usuario = new Usuario();
+                usuario.NombreCompletoUsuario1 = txtNombreUsuario.Text.Trim();
+                usuario.CorrreoElectronico1 = txtCorreoElectronico.Text.Trim();
+                usuario.Clave1 = BCrypt.Net.BCrypt.HashPassword(txtClave.Text);
+                usuario.IdRol1 = Convert.ToInt32(cmbRol.SelectedValue);
+
+                usuario.InsertarUsuario();
+                VerUsuarios();
+
+                MessageBox.Show("Usuario registrado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void frmRegistrar_Load(object sender, EventArgs e)
@@ -105,24 +154,111 @@ namespace Sistema_de_inventario.UserControls
 
         private void btnEliminarUsuarios_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario();
-            usuario.IdUsuario1 = Convert.ToInt32(dgvVerUsuarios.CurrentRow.Cells["IdUsuario"].Value);
-            usuario.EliminarUsuario();
-            VerUsuarios();
+            try
+            {
+                // Validar que hay una fila seleccionada
+                if (dgvVerUsuarios.CurrentRow == null)
+                {
+                    MessageBox.Show("Debe seleccionar un usuario para eliminar.");
+                    return;
+                }
+
+                // Validar que la celda contiene un valor válido
+                var cellValue = dgvVerUsuarios.CurrentRow.Cells["IdUsuario"].Value;
+                if (cellValue == null || string.IsNullOrWhiteSpace(cellValue.ToString()))
+                {
+                    MessageBox.Show("El usuario seleccionado no tiene un ID válido.");
+                    return;
+                }
+
+                // Validar que el ID es un número entero
+                if (!int.TryParse(cellValue.ToString(), out int idUsuario))
+                {
+                    MessageBox.Show("El ID del usuario no es válido.");
+                    return;
+                }
+
+                // Confirmación opcional
+                var confirm = MessageBox.Show("¿Está seguro que desea eliminar este usuario?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (confirm != DialogResult.Yes)
+                {
+                    return;
+                }
+
+                // Eliminar usuario
+                Usuario usuario = new Usuario();
+                usuario.IdUsuario1 = idUsuario;
+                usuario.EliminarUsuario();
+                VerUsuarios();
+
+                MessageBox.Show("Usuario eliminado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
 
         }
 
         private void btnActuali_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario();
+            try
+            {
+                // Validar campos obligatorios
+                if (string.IsNullOrWhiteSpace(txtNombreUsuario.Text))
+                {
+                    MessageBox.Show("El nombre completo es obligatorio.");
+                    return;
+                }
 
-            usuario.NombreCompletoUsuario1 = txtNombreUsuario.Text;
-            usuario.CorrreoElectronico1 = txtCorreoElectronico.Text;
-            usuario.Clave1 = BCrypt.Net.BCrypt.HashPassword(txtClave.Text);
-            usuario.IdRol1 = Convert.ToInt32(cmbRol.SelectedValue);
-            usuario.IdUsuario1 = int.Parse(dgvVerUsuarios.CurrentRow.Cells["IdUsuario"].Value.ToString());
-            usuario.ActualizarUsuario();
-            VerUsuarios();
+                if (string.IsNullOrWhiteSpace(txtCorreoElectronico.Text))
+                {
+                    MessageBox.Show("El correo electrónico es obligatorio.");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtClave.Text))
+                {
+                    MessageBox.Show("La clave es obligatoria.");
+                    return;
+                }
+
+                if (cmbRol.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Debe seleccionar un rol.");
+                    return;
+                }
+
+                // Validar formato de correo
+                if (!Regex.IsMatch(txtCorreoElectronico.Text.Trim(), @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+                {
+                    MessageBox.Show("El correo electrónico no tiene un formato válido.");
+                    return;
+                }
+
+                // Validar longitud de clave
+                if (txtClave.Text.Length < 6)
+                {
+                    MessageBox.Show("La clave debe tener al menos 6 caracteres.");
+                    return;
+                }
+
+                // Crear y asignar usuario
+                Usuario usuario = new Usuario();
+                usuario.NombreCompletoUsuario1 = txtNombreUsuario.Text.Trim();
+                usuario.CorrreoElectronico1 = txtCorreoElectronico.Text.Trim();
+                usuario.Clave1 = BCrypt.Net.BCrypt.HashPassword(txtClave.Text);
+                usuario.IdRol1 = Convert.ToInt32(cmbRol.SelectedValue);
+
+                usuario.ActualizarUsuario();
+                VerUsuarios();
+
+                MessageBox.Show("Usuario registrado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnLimpiarCampos_Click(object sender, EventArgs e)

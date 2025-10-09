@@ -139,7 +139,39 @@ namespace Sistema_de_inventario.UserControls
             }
 
 
+            // Validar cantidad
+            if (!int.TryParse(txtCantidad.Text.Trim(), out int cantidad) || cantidad <= 0)
+            {
+                MessageBox.Show("La cantidad debe ser un número entero positivo.", "Cantidad inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            // Validar montos
+            if (!decimal.TryParse(txtMontoPago.Text.Trim(), out decimal montoPago) || montoPago <= 0)
+            {
+                MessageBox.Show("El monto de pago debe ser un número decimal positivo.", "Monto de pago inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!decimal.TryParse(txtMontoTotal.Text.Trim(), out decimal montoTotal) || montoTotal <= 0)
+            {
+                MessageBox.Show("El monto total debe ser un número decimal positivo.", "Monto total inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!decimal.TryParse(txtMontoCambio.Text.Trim(), out decimal montoCambio) || montoCambio < 0)
+            {
+                MessageBox.Show("El monto de cambio debe ser un número decimal igual o mayor a cero.", "Monto de cambio inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+       
+
+            if (montoCambio != montoPago - montoTotal)
+            {
+                MessageBox.Show("El monto de cambio no coincide con la diferencia entre pago y total.", "Monto de cambio incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
 
             Ventas nuevaVenta = new Ventas();
@@ -172,6 +204,50 @@ namespace Sistema_de_inventario.UserControls
 
         private void btnActualizarVenta_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtCantidad.Text) || string.IsNullOrWhiteSpace(txtMontoPago.Text) || string.IsNullOrWhiteSpace(txtMontoCambio.Text) || string.IsNullOrWhiteSpace(txtMontoTotal.Text) || cmbProducto.SelectedIndex == -1 || cmbTipoDocumento.SelectedIndex == -1 || cmbUsuario.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, complete todos los campos.", "Ingrese todos los campos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            // Validar cantidad
+            if (!int.TryParse(txtCantidad.Text.Trim(), out int cantidad) || cantidad <= 0)
+            {
+                MessageBox.Show("La cantidad debe ser un número entero positivo.", "Cantidad inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validar montos
+            if (!decimal.TryParse(txtMontoPago.Text.Trim(), out decimal montoPago) || montoPago <= 0)
+            {
+                MessageBox.Show("El monto de pago debe ser un número decimal positivo.", "Monto de pago inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!decimal.TryParse(txtMontoTotal.Text.Trim(), out decimal montoTotal) || montoTotal <= 0)
+            {
+                MessageBox.Show("El monto total debe ser un número decimal positivo.", "Monto total inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!decimal.TryParse(txtMontoCambio.Text.Trim(), out decimal montoCambio) || montoCambio < 0)
+            {
+                MessageBox.Show("El monto de cambio debe ser un número decimal igual o mayor a cero.", "Monto de cambio inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+
+            if (montoCambio != montoPago - montoTotal)
+            {
+                MessageBox.Show("El monto de cambio no coincide con la diferencia entre pago y total.", "Monto de cambio incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+
+
             Ventas nuevaVenta = new Ventas();
             nuevaVenta.Usuario_id = Convert.ToInt32(cmbUsuario.SelectedValue.ToString());
             nuevaVenta.Producto_id = Convert.ToInt32(cmbProducto.SelectedValue.ToString());
@@ -189,10 +265,48 @@ namespace Sistema_de_inventario.UserControls
 
         private void btnEliminarVenta_Click(object sender, EventArgs e)
         {
-            Ventas ventas = new Ventas();
-            int id = int.Parse(dgvVerGestionVentas.CurrentRow.Cells["idVenta"].Value.ToString());
-            ventas.EliminarVenta(id);
-            MostrarInformacionDGV();
+            try
+            {
+                // Validar que hay una fila seleccionada
+                if (dgvVerGestionVentas.CurrentRow == null)
+                {
+                    MessageBox.Show("Debe seleccionar una venta para eliminar.", "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Validar que la celda contiene un valor válido
+                var cellValue = dgvVerGestionVentas.CurrentRow.Cells["idVenta"].Value;
+                if (cellValue == null || string.IsNullOrWhiteSpace(cellValue.ToString()))
+                {
+                    MessageBox.Show("La venta seleccionada no tiene un ID válido.", "ID inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Validar que el ID es un número entero
+                if (!int.TryParse(cellValue.ToString(), out int idVenta))
+                {
+                    MessageBox.Show("El ID de la venta no es válido.", "Conversión fallida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Confirmación opcional
+                var confirm = MessageBox.Show("¿Está seguro que desea eliminar esta venta?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm != DialogResult.Yes)
+                {
+                    return;
+                }
+
+                // Eliminar venta
+                Ventas ventas = new Ventas();
+                ventas.EliminarVenta(idVenta);
+                MostrarInformacionDGV();
+
+                MessageBox.Show("Venta eliminada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

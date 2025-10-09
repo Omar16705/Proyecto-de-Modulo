@@ -82,7 +82,7 @@ namespace Sistema_de_inventario.Formularios
                 {
                     // Login exitoso
 
-                    MessageBox.Show("Bienvenido al Sistema", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Bienvenido al Sistema: " + usuarioLogin.NombreCompletoUsuario1, "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     // Aquí puedes redirigir a la pantalla principal
                     frmDashboard dashboard = new frmDashboard();

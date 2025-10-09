@@ -100,12 +100,6 @@
     <Compile Include="UserControls\frmGestionProveedores.Designer.cs">
       <DependentUpon>frmGestionProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\frmGestionUsuarios.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\frmGestionUsuarios.Designer.cs">
-      <DependentUpon>frmGestionUsuarios.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\frmGestionVentas.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,9 +139,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\frmGestionProveedores.resx">
       <DependentUpon>frmGestionProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\frmGestionUsuarios.resx">
-      <DependentUpon>frmGestionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\frmGestionVentas.resx">
       <DependentUpon>frmGestionVentas.cs</DependentUpon>
