@@ -120,7 +120,7 @@ namespace Modelos.Entidades
             }
         }
 
-
+        Productos Productos = new Productos();
         public bool EliminarProveedor(int id)
         {
             try
@@ -130,8 +130,9 @@ namespace Modelos.Entidades
                     SqlCommand cmd = new SqlCommand("EliminarProveedorCompleto", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    //  Aquí el parámetro correcto
+          
                     cmd.Parameters.AddWithValue("@idProveedor", id);
+                    cmd.Parameters.AddWithValue("@idProducto", Productos.IdProducto);
 
                     conn.Open();
                     cmd.ExecuteNonQuery();

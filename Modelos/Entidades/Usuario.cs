@@ -148,19 +148,19 @@ namespace Modelos.Entidades
 
                     cmd.ExecuteNonQuery();
 
-                    //  Mensaje dinámico según el rol asignado
+                   
                     string mensaje;
                     switch (IdRol1)
                     {
-                        case 1: // Administrador
+                        case 1: /// Administrador acceso total
                             mensaje = "Se ha insertado un ADMINISTRADOR con acceso completo al sistema.";
                             break;
 
-                        case 2: // Vendedor
+                        case 2: //// caso de nivel de usuario de vendedor
                             mensaje = "Se ha insertado un VENDEDOR con permiso de registrar ventas dentro del sistema.";
                             break;
 
-                        case 3: // Almacenista
+                        case 3: // caso nivel de usuario de almacenista 
                             mensaje = "Se ha insertado un ALMACENISTA con permiso de gestionar el inventario.";
                             break;
 
@@ -201,7 +201,7 @@ namespace Modelos.Entidades
 
                 object resultado = comando.ExecuteScalar();
 
-                ////////////Aqui verificamos i el usuario existe
+                ////////////Aqui verificamos si el usuario existe
                 if (resultado == null || resultado == DBNull.Value)
                 {
                     MessageBox.Show("El usuario no existe.");
@@ -230,7 +230,7 @@ namespace Modelos.Entidades
                         VerificarUsuario.Nombre_usuario = rd.GetString(0);
                         VerificarUsuario.Email = rd.GetString(1);
                         VerificarUsuario.Rol = rd.GetString(2);
-                        return true; // Login correcto
+                        return true; ////// Login correcto
                     }
                 }
 

@@ -57,7 +57,7 @@
             this.pnlRegistraroIniciarSesion.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlRegistraroIniciarSesion.Location = new System.Drawing.Point(0, 0);
             this.pnlRegistraroIniciarSesion.Name = "pnlRegistraroIniciarSesion";
-            this.pnlRegistraroIniciarSesion.Size = new System.Drawing.Size(260, 437);
+            this.pnlRegistraroIniciarSesion.Size = new System.Drawing.Size(260, 412);
             this.pnlRegistraroIniciarSesion.TabIndex = 0;
             this.pnlRegistraroIniciarSesion.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRegistraroIniciarSesion_Paint);
             // 
@@ -66,7 +66,7 @@
             this.lbkOlvisdastetuPass.AutoSize = true;
             this.lbkOlvisdastetuPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbkOlvisdastetuPass.LinkColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbkOlvisdastetuPass.Location = new System.Drawing.Point(47, 337);
+            this.lbkOlvisdastetuPass.Location = new System.Drawing.Point(46, 318);
             this.lbkOlvisdastetuPass.Name = "lbkOlvisdastetuPass";
             this.lbkOlvisdastetuPass.Size = new System.Drawing.Size(163, 16);
             this.lbkOlvisdastetuPass.TabIndex = 3;
@@ -81,7 +81,7 @@
             this.btnCerrarApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarApp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCerrarApp.Location = new System.Drawing.Point(0, 387);
+            this.btnCerrarApp.Location = new System.Drawing.Point(0, 362);
             this.btnCerrarApp.Name = "btnCerrarApp";
             this.btnCerrarApp.Size = new System.Drawing.Size(260, 50);
             this.btnCerrarApp.TabIndex = 2;
@@ -123,16 +123,16 @@
             this.pnlAcciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAcciones.Location = new System.Drawing.Point(260, 0);
             this.pnlAcciones.Name = "pnlAcciones";
-            this.pnlAcciones.Size = new System.Drawing.Size(604, 437);
+            this.pnlAcciones.Size = new System.Drawing.Size(484, 412);
             this.pnlAcciones.TabIndex = 1;
             // 
             // btnVerClave
             // 
             this.btnVerClave.BackColor = System.Drawing.SystemColors.Control;
             this.btnVerClave.Image = global::Sistema_de_inventario.Properties.Resources.icons8_ojo_28;
-            this.btnVerClave.Location = new System.Drawing.Point(451, 248);
+            this.btnVerClave.Location = new System.Drawing.Point(386, 228);
             this.btnVerClave.Name = "btnVerClave";
-            this.btnVerClave.Size = new System.Drawing.Size(75, 23);
+            this.btnVerClave.Size = new System.Drawing.Size(63, 23);
             this.btnVerClave.TabIndex = 31;
             this.btnVerClave.UseVisualStyleBackColor = false;
             this.btnVerClave.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnVerClave_MouseDown);
@@ -142,7 +142,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(213, 51);
+            this.label3.Location = new System.Drawing.Point(148, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(155, 25);
             this.label3.TabIndex = 30;
@@ -150,8 +150,8 @@
             // 
             // btnIniciarSesion
             // 
-            this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarSesion.Location = new System.Drawing.Point(165, 306);
+            this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciarSesion.Location = new System.Drawing.Point(100, 286);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(272, 77);
             this.btnIniciarSesion.TabIndex = 29;
@@ -163,7 +163,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(159, 217);
+            this.label2.Location = new System.Drawing.Point(94, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 18);
             this.label2.TabIndex = 28;
@@ -173,7 +173,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(162, 118);
+            this.label1.Location = new System.Drawing.Point(97, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 18);
             this.label1.TabIndex = 27;
@@ -182,7 +182,7 @@
             // txtClave
             // 
             this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClave.Location = new System.Drawing.Point(162, 248);
+            this.txtClave.Location = new System.Drawing.Point(97, 228);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(273, 24);
@@ -192,7 +192,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(162, 162);
+            this.txtUsuario.Location = new System.Drawing.Point(97, 142);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(273, 24);
             this.txtUsuario.TabIndex = 25;
@@ -202,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 437);
+            this.ClientSize = new System.Drawing.Size(744, 412);
             this.Controls.Add(this.pnlAcciones);
             this.Controls.Add(this.pnlRegistraroIniciarSesion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
