@@ -96,5 +96,35 @@ namespace Sistema_de_inventario.Formularios
                 MessageBox.Show("No se pudo actualizar la contraseña. Verifica los registros y la conexión con la base de datos cxd.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVerClave_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtNuevaClave.PasswordChar = '\0';
+        }
+
+        private void btnVerClave_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtNuevaClave.PasswordChar = '*';
+        }
+
+        private void button1_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtConfirmarClave.PasswordChar = '\0';
+        }
+
+        private void button1_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtConfirmarClave.PasswordChar = '*';
+        }
+
+        private void frmRestablecerClave_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

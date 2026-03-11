@@ -113,25 +113,21 @@ namespace Modelos.Entidades
             }
         }
 
-        public bool EliminarVenta(int id)
+        
+        
+        public void EliminarVenta(int idVenta)
         {
-            try
+            using (SqlConnection conn = Conexion.conectar())
             {
-                SqlConnection conexion = Conexion.conectar();
-                string query = "DELETE FROM Ventas WHERE idVenta = @id";
-                SqlCommand cmd = new SqlCommand(query, conexion);
-                cmd.Parameters.AddWithValue("@id", id);
-                conexion.Open();
-                cmd.ExecuteNonQuery();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al eliminar la venta: " + ex.Message);
-                return false;
-            }
+                using (SqlCommand cmd = new SqlCommand("sp_EliminarVenta", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@idVenta", idVenta);
 
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
-
-   }
+    }
 }

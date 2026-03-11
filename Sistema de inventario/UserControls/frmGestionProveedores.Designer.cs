@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblGestionProveedores = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtDocumentoProveedor = new System.Windows.Forms.TextBox();
-            this.txtNombreProveedor = new System.Windows.Forms.TextBox();
-            this.txtEmailProveedor = new System.Windows.Forms.TextBox();
-            this.txtTelefonoProveedor = new System.Windows.Forms.TextBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnAgregarProveedor = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.txtTelefonoProveedor = new System.Windows.Forms.TextBox();
+            this.txtEmailProveedor = new System.Windows.Forms.TextBox();
+            this.txtNombreProveedor = new System.Windows.Forms.TextBox();
+            this.txtDocumentoProveedor = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblGestionProveedores = new System.Windows.Forms.Label();
             this.dgvVerProveedores = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerProveedores)).BeginInit();
@@ -70,49 +70,81 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // lblGestionProveedores
+            // btnAgregarProveedor
             // 
-            this.lblGestionProveedores.AutoSize = true;
-            this.lblGestionProveedores.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGestionProveedores.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblGestionProveedores.Location = new System.Drawing.Point(14, 15);
-            this.lblGestionProveedores.Name = "lblGestionProveedores";
-            this.lblGestionProveedores.Size = new System.Drawing.Size(230, 23);
-            this.lblGestionProveedores.TabIndex = 0;
-            this.lblGestionProveedores.Text = "Gestion de Proveedores";
+            this.btnAgregarProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProveedor.Location = new System.Drawing.Point(683, 61);
+            this.btnAgregarProveedor.Name = "btnAgregarProveedor";
+            this.btnAgregarProveedor.Size = new System.Drawing.Size(154, 34);
+            this.btnAgregarProveedor.TabIndex = 13;
+            this.btnAgregarProveedor.Text = "Agregar Proveedor";
+            this.btnAgregarProveedor.UseVisualStyleBackColor = true;
+            this.btnAgregarProveedor.Click += new System.EventHandler(this.btnAgregarProveedor_Click);
             // 
-            // label1
+            // btnLimpiar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(32, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Documento del Proveedor:";
+            this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(683, 215);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(154, 36);
+            this.btnLimpiar.TabIndex = 12;
+            this.btnLimpiar.Text = "Limpiar Campos";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // label2
+            // btnActualizar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(32, 133);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 21);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nombre del Proveedor:";
+            this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Location = new System.Drawing.Point(683, 112);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(154, 33);
+            this.btnActualizar.TabIndex = 11;
+            this.btnActualizar.Text = "Actualizar Proveedor";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // label3
+            // btnEliminar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(32, 178);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 21);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Email del Proveedor:";
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(683, 161);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(154, 38);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.Text = "Eliminar Proveedor";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // txtTelefonoProveedor
+            // 
+            this.txtTelefonoProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefonoProveedor.Location = new System.Drawing.Point(268, 222);
+            this.txtTelefonoProveedor.Name = "txtTelefonoProveedor";
+            this.txtTelefonoProveedor.Size = new System.Drawing.Size(319, 23);
+            this.txtTelefonoProveedor.TabIndex = 8;
+            // 
+            // txtEmailProveedor
+            // 
+            this.txtEmailProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailProveedor.Location = new System.Drawing.Point(268, 178);
+            this.txtEmailProveedor.Name = "txtEmailProveedor";
+            this.txtEmailProveedor.Size = new System.Drawing.Size(319, 23);
+            this.txtEmailProveedor.TabIndex = 7;
+            // 
+            // txtNombreProveedor
+            // 
+            this.txtNombreProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreProveedor.Location = new System.Drawing.Point(268, 133);
+            this.txtNombreProveedor.Name = "txtNombreProveedor";
+            this.txtNombreProveedor.Size = new System.Drawing.Size(319, 23);
+            this.txtNombreProveedor.TabIndex = 6;
+            // 
+            // txtDocumentoProveedor
+            // 
+            this.txtDocumentoProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocumentoProveedor.Location = new System.Drawing.Point(268, 87);
+            this.txtDocumentoProveedor.Name = "txtDocumentoProveedor";
+            this.txtDocumentoProveedor.Size = new System.Drawing.Size(319, 23);
+            this.txtDocumentoProveedor.TabIndex = 5;
             // 
             // label4
             // 
@@ -125,81 +157,49 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Telefono del Proveedor:";
             // 
-            // txtDocumentoProveedor
+            // label3
             // 
-            this.txtDocumentoProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDocumentoProveedor.Location = new System.Drawing.Point(268, 87);
-            this.txtDocumentoProveedor.Name = "txtDocumentoProveedor";
-            this.txtDocumentoProveedor.Size = new System.Drawing.Size(319, 23);
-            this.txtDocumentoProveedor.TabIndex = 5;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(32, 178);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(167, 21);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Email del Proveedor:";
             // 
-            // txtNombreProveedor
+            // label2
             // 
-            this.txtNombreProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreProveedor.Location = new System.Drawing.Point(268, 133);
-            this.txtNombreProveedor.Name = "txtNombreProveedor";
-            this.txtNombreProveedor.Size = new System.Drawing.Size(319, 23);
-            this.txtNombreProveedor.TabIndex = 6;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(32, 133);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(189, 21);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nombre del Proveedor:";
             // 
-            // txtEmailProveedor
+            // label1
             // 
-            this.txtEmailProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailProveedor.Location = new System.Drawing.Point(268, 178);
-            this.txtEmailProveedor.Name = "txtEmailProveedor";
-            this.txtEmailProveedor.Size = new System.Drawing.Size(319, 23);
-            this.txtEmailProveedor.TabIndex = 7;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(32, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(220, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Documento del Proveedor:";
             // 
-            // txtTelefonoProveedor
+            // lblGestionProveedores
             // 
-            this.txtTelefonoProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefonoProveedor.Location = new System.Drawing.Point(268, 222);
-            this.txtTelefonoProveedor.Name = "txtTelefonoProveedor";
-            this.txtTelefonoProveedor.Size = new System.Drawing.Size(319, 23);
-            this.txtTelefonoProveedor.TabIndex = 8;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(683, 179);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(154, 23);
-            this.btnEliminar.TabIndex = 10;
-            this.btnEliminar.Text = "Eliminar Proveedor";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(683, 138);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(154, 23);
-            this.btnActualizar.TabIndex = 11;
-            this.btnActualizar.Text = "Actualizar Proveedor";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(683, 222);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(154, 36);
-            this.btnLimpiar.TabIndex = 12;
-            this.btnLimpiar.Text = "Limpiar Campos";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // btnAgregarProveedor
-            // 
-            this.btnAgregarProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProveedor.Location = new System.Drawing.Point(683, 84);
-            this.btnAgregarProveedor.Name = "btnAgregarProveedor";
-            this.btnAgregarProveedor.Size = new System.Drawing.Size(154, 26);
-            this.btnAgregarProveedor.TabIndex = 13;
-            this.btnAgregarProveedor.Text = "Agregar Proveedor";
-            this.btnAgregarProveedor.UseVisualStyleBackColor = true;
-            this.btnAgregarProveedor.Click += new System.EventHandler(this.btnAgregarProveedor_Click);
+            this.lblGestionProveedores.AutoSize = true;
+            this.lblGestionProveedores.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionProveedores.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblGestionProveedores.Location = new System.Drawing.Point(32, 19);
+            this.lblGestionProveedores.Name = "lblGestionProveedores";
+            this.lblGestionProveedores.Size = new System.Drawing.Size(230, 23);
+            this.lblGestionProveedores.TabIndex = 0;
+            this.lblGestionProveedores.Text = "Gestion de Proveedores";
             // 
             // dgvVerProveedores
             // 

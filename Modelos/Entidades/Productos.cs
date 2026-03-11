@@ -145,6 +145,22 @@ namespace Modelos.Entidades
         }
 
 
+        public void EliminarProductoCompleto(int idProducto)
+        {
+            using (SqlConnection conn = Conexion.conectar())
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_EliminarProductoCompleto", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@idProducto", idProducto);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
 
 
         public static DataTable MostrarProductosCMB()

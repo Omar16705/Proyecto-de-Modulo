@@ -39,10 +39,11 @@
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.lblRegistrarse = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvVerUsuarios = new System.Windows.Forms.DataGridView();
-            this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.btnEliminarUsuarios = new System.Windows.Forms.Button();
             this.btnActuali = new System.Windows.Forms.Button();
+            this.btnLimpiarCampos = new System.Windows.Forms.Button();
+            this.dgvVerUsuarios = new System.Windows.Forms.DataGridView();
+            this.btnVerClave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -51,9 +52,9 @@
             // 
             this.btnRegistrar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(572, 164);
+            this.btnRegistrar.Location = new System.Drawing.Point(595, 164);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(115, 63);
             this.btnRegistrar.TabIndex = 19;
@@ -95,6 +96,7 @@
             this.txtClave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClave.Location = new System.Drawing.Point(208, 160);
             this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(307, 26);
             this.txtClave.TabIndex = 15;
             // 
@@ -111,7 +113,7 @@
             this.lblClave.AutoSize = true;
             this.lblClave.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblClave.Location = new System.Drawing.Point(18, 164);
+            this.lblClave.Location = new System.Drawing.Point(13, 164);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(71, 22);
             this.lblClave.TabIndex = 13;
@@ -122,7 +124,7 @@
             this.lblCorrreoElectronico.AutoSize = true;
             this.lblCorrreoElectronico.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorrreoElectronico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCorrreoElectronico.Location = new System.Drawing.Point(18, 116);
+            this.lblCorrreoElectronico.Location = new System.Drawing.Point(13, 116);
             this.lblCorrreoElectronico.Name = "lblCorrreoElectronico";
             this.lblCorrreoElectronico.Size = new System.Drawing.Size(184, 22);
             this.lblCorrreoElectronico.TabIndex = 12;
@@ -153,6 +155,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(77)))), ((int)(((byte)(86)))));
+            this.panel1.Controls.Add(this.btnVerClave);
             this.panel1.Controls.Add(this.btnEliminarUsuarios);
             this.panel1.Controls.Add(this.btnActuali);
             this.panel1.Controls.Add(this.btnLimpiarCampos);
@@ -173,38 +176,13 @@
             this.panel1.TabIndex = 20;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // dgvVerUsuarios
-            // 
-            this.dgvVerUsuarios.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvVerUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVerUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvVerUsuarios.Location = new System.Drawing.Point(0, 253);
-            this.dgvVerUsuarios.Name = "dgvVerUsuarios";
-            this.dgvVerUsuarios.Size = new System.Drawing.Size(874, 283);
-            this.dgvVerUsuarios.TabIndex = 21;
-            this.dgvVerUsuarios.DoubleClick += new System.EventHandler(this.dgvVerUsuarios_DoubleClick);
-            // 
-            // btnLimpiarCampos
-            // 
-            this.btnLimpiarCampos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLimpiarCampos.FlatAppearance.BorderSize = 0;
-            this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarCampos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(709, 75);
-            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
-            this.btnLimpiarCampos.Size = new System.Drawing.Size(115, 63);
-            this.btnLimpiarCampos.TabIndex = 20;
-            this.btnLimpiarCampos.Text = "Limpiar Campos";
-            this.btnLimpiarCampos.UseVisualStyleBackColor = false;
-            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
-            // 
             // btnEliminarUsuarios
             // 
             this.btnEliminarUsuarios.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminarUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnEliminarUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnEliminarUsuarios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarUsuarios.Location = new System.Drawing.Point(709, 164);
+            this.btnEliminarUsuarios.Location = new System.Drawing.Point(732, 164);
             this.btnEliminarUsuarios.Name = "btnEliminarUsuarios";
             this.btnEliminarUsuarios.Size = new System.Drawing.Size(115, 63);
             this.btnEliminarUsuarios.TabIndex = 22;
@@ -216,15 +194,53 @@
             // 
             this.btnActuali.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnActuali.FlatAppearance.BorderSize = 0;
-            this.btnActuali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActuali.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnActuali.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActuali.Location = new System.Drawing.Point(572, 75);
+            this.btnActuali.Location = new System.Drawing.Point(595, 75);
             this.btnActuali.Name = "btnActuali";
             this.btnActuali.Size = new System.Drawing.Size(115, 63);
             this.btnActuali.TabIndex = 21;
             this.btnActuali.Text = "Actualizar Usuarios";
             this.btnActuali.UseVisualStyleBackColor = false;
             this.btnActuali.Click += new System.EventHandler(this.btnActuali_Click);
+            // 
+            // btnLimpiarCampos
+            // 
+            this.btnLimpiarCampos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLimpiarCampos.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnLimpiarCampos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(732, 75);
+            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(115, 63);
+            this.btnLimpiarCampos.TabIndex = 20;
+            this.btnLimpiarCampos.Text = "Limpiar  Campos";
+            this.btnLimpiarCampos.UseVisualStyleBackColor = false;
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
+            // 
+            // dgvVerUsuarios
+            // 
+            this.dgvVerUsuarios.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvVerUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVerUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvVerUsuarios.Location = new System.Drawing.Point(0, 253);
+            this.dgvVerUsuarios.Name = "dgvVerUsuarios";
+            this.dgvVerUsuarios.Size = new System.Drawing.Size(874, 283);
+            this.dgvVerUsuarios.TabIndex = 21;
+            this.dgvVerUsuarios.DoubleClick += new System.EventHandler(this.dgvVerUsuarios_DoubleClick);
+            // 
+            // btnVerClave
+            // 
+            this.btnVerClave.BackColor = System.Drawing.SystemColors.Control;
+            this.btnVerClave.Image = global::Sistema_de_inventario.Properties.Resources.icons8_ojo_28;
+            this.btnVerClave.Location = new System.Drawing.Point(521, 163);
+            this.btnVerClave.Name = "btnVerClave";
+            this.btnVerClave.Size = new System.Drawing.Size(63, 23);
+            this.btnVerClave.TabIndex = 32;
+            this.btnVerClave.UseVisualStyleBackColor = false;
+            this.btnVerClave.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnVerClave_MouseDown);
+            this.btnVerClave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnVerClave_MouseMove);
+            this.btnVerClave.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnVerClave_MouseUp);
             // 
             // frmRegistrar
             // 
@@ -259,5 +275,6 @@
         private System.Windows.Forms.Button btnEliminarUsuarios;
         private System.Windows.Forms.Button btnLimpiarCampos;
         private System.Windows.Forms.Button btnActuali;
+        private System.Windows.Forms.Button btnVerClave;
     }
 }

@@ -265,13 +265,29 @@ namespace Modelos.Entidades
             }
         }
 
+        public void EliminarUsuarios(int idUsuario)
+        {
+            using (SqlConnection conn = Conexion.conectar())
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_EliminarUsuario", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
         public bool ActualizarUsuario()
         {
             try
             {
                 SqlConnection conexion = Conexion.conectar();
                 conexion.Open();
-                string query = "update USUARIOS set NombreCompletoUsuario = @NombreCompletoUsuario, correoUsuario = @CorreoElectronico, rol_id = @IdRol where idUsuario = @IdUsuario";
+                string query = "UPDATE Usuarios set NombreCompletoUsuario = @NombreCompletoUsuario, correoUsuario = @CorreoElectronico, rol_id = @IdRol where idUsuario = @IdUsuario";
                 SqlCommand cmd = new SqlCommand(query, conexion);
                 
                 cmd.Parameters.AddWithValue("@NombreCompletoUsuario", NombreCompletoUsuario1);
@@ -280,7 +296,7 @@ namespace Modelos.Entidades
                 cmd.Parameters.AddWithValue("@IdRol", IdRol1);
                 cmd.Parameters.AddWithValue("@IdUsuario", IdUsuario1);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Se ha actualizado el Usuario");
+               // MessageBox.Show("Se ha actualizado el Usuario");
 
                 return true;
             }

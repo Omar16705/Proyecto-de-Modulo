@@ -267,45 +267,43 @@ namespace Sistema_de_inventario.UserControls
         {
             try
             {
-                // Validar que hay una fila seleccionada
+                // Validar que haya una fila seleccionada
                 if (dgvVerGestionVentas.CurrentRow == null)
                 {
-                    MessageBox.Show("Debe seleccionar una venta para eliminar.", "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Debe seleccionar una venta para eliminar.");
                     return;
                 }
 
-                // Validar que la celda contiene un valor válido
+                // Obtener ID
                 var cellValue = dgvVerGestionVentas.CurrentRow.Cells["idVenta"].Value;
-                if (cellValue == null || string.IsNullOrWhiteSpace(cellValue.ToString()))
+
+                if (cellValue == null || !int.TryParse(cellValue.ToString(), out int idVenta))
                 {
-                    MessageBox.Show("La venta seleccionada no tiene un ID válido.", "ID inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El ID de la venta no es válido.");
                     return;
                 }
 
-                // Validar que el ID es un número entero
-                if (!int.TryParse(cellValue.ToString(), out int idVenta))
-                {
-                    MessageBox.Show("El ID de la venta no es válido.", "Conversión fallida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                // Confirmación del usuario
+                DialogResult resultado = MessageBox.Show(
+                    "⚠ Esta acción eliminará la venta de forma permanente.\n\n¿Desea continuar?",
+                    "Confirmar eliminación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
 
-                // Confirmación opcional
-                var confirm = MessageBox.Show("¿Está seguro que desea eliminar esta venta?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (confirm != DialogResult.Yes)
-                {
+                if (resultado != DialogResult.Yes)
                     return;
-                }
 
-                // Eliminar venta
-                Ventas ventas = new Ventas();
+                
+                // Llamar método
+Ventas ventas = new Ventas();
                 ventas.EliminarVenta(idVenta);
-                MostrarInformacionDGV();
 
-                MessageBox.Show("Venta eliminada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Venta eliminada correctamente.");
+                MostrarInformacionDGV(); // Método para refrescar el DataGridView
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
     }

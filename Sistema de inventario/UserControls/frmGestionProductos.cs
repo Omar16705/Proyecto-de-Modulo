@@ -239,7 +239,7 @@ namespace Sistema_de_inventario.UserControls
                 productos.Stock = int.Parse(txtStock.Text.Trim());
                 productos.PrecioCompra = decimal.Parse(txtPrecioCompra.Text.Trim());
                 productos.PrecioVenta = decimal.Parse(txtPrecioVenta.Text.Trim());
-                   productos.IdProducto = int.Parse(dgvVerProductos.CurrentRow.Cells["idProducto"].Value.ToString());
+                   productos.IdProducto = int.Parse(dgvVerProductos.CurrentRow.Cells["ID Producto"].Value.ToString());
 
 
                 productos.ActualizarProducto();
@@ -255,60 +255,53 @@ namespace Sistema_de_inventario.UserControls
 
         private void dgvVerProductos_DoubleClick(object sender, EventArgs e)
         {
-            txtCodProducto.Text = dgvVerProductos.CurrentRow.Cells["CodigoProducto"].Value.ToString();
-            txtNombreProducto.Text = dgvVerProductos.CurrentRow.Cells["NombreProducto"].Value.ToString();
-            cmbCategoria.SelectedValue = dgvVerProductos.CurrentRow.Cells["categoria_id"].Value;
-            cbmProveedor.SelectedValue = dgvVerProductos.CurrentRow.Cells["Proveedor_id"].Value;
+            txtCodProducto.Text = dgvVerProductos.CurrentRow.Cells["Codigo Producto"].Value.ToString();
+            txtNombreProducto.Text = dgvVerProductos.CurrentRow.Cells["Nombre del Producto"].Value.ToString();
+            cmbCategoria.SelectedValue = dgvVerProductos.CurrentRow.Cells["ID Categoria"].Value;
+            cbmProveedor.SelectedValue = dgvVerProductos.CurrentRow.Cells["ID Proveedor"].Value;
             txtStock.Text = dgvVerProductos.CurrentRow.Cells["Stock"].Value.ToString();
-            txtPrecioCompra.Text = dgvVerProductos.CurrentRow.Cells["PrecioCompra"].Value.ToString();
-            txtPrecioVenta.Text = dgvVerProductos.CurrentRow.Cells["PrecioVenta"].Value.ToString();
+            txtPrecioCompra.Text = dgvVerProductos.CurrentRow.Cells["Precio de Compra"].Value.ToString();
+            txtPrecioVenta.Text = dgvVerProductos.CurrentRow.Cells["Precio de Venta"].Value.ToString();
 
         }
 
         private void btnEliminarProducto_Click(object sender, EventArgs e)
         {
+            try
             {
-                try
+                if (dgvVerProductos.CurrentRow == null)
                 {
-                    // Validar que hay una fila seleccionada
-                    if (dgvVerProductos.CurrentRow == null)
-                    {
-                        MessageBox.Show("Debe seleccionar un producto para eliminar.");
-                        return;
-                    }
-
-                    // Validar que la celda contiene un valor válido
-                    var cellValue = dgvVerProductos.CurrentRow.Cells["ID Producto"].Value;
-                    if (cellValue == null || string.IsNullOrWhiteSpace(cellValue.ToString()))
-                    {
-                        MessageBox.Show("El producto seleccionado no tiene un ID válido.");
-                        return;
-                    }
-
-                    // Validar que el ID es un número entero
-                    if (!int.TryParse(cellValue.ToString(), out int id))
-                    {
-                        MessageBox.Show("El ID del producto no es válido.");
-                        return;
-                    }
-
-                    // Confirmación opcional
-                    var confirm = MessageBox.Show("¿Está seguro que desea eliminar este producto?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (confirm != DialogResult.Yes)
-                    {
-                        return;
-                    }
-
-                    // Eliminar producto
-                    productos.EliminarProducto(id);
-                    VerDatagriv();
-
-                    MessageBox.Show("Producto eliminado correctamente.");
+                    MessageBox.Show("Debe seleccionar un producto.");
+                    return;
                 }
-                catch (Exception ex)
+
+                var cellValue = dgvVerProductos.CurrentRow.Cells["ID Producto"].Value;
+
+                if (cellValue == null || !int.TryParse(cellValue.ToString(), out int idProducto))
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("ID inválido.");
+                    return;
                 }
-        }   }
+
+                // Confirmación del usuario
+                DialogResult resultado = MessageBox.Show(
+                    "⚠ Esta acción eliminará el producto y todas sus ventas asociadas.\n\n¿Desea continuar?",
+                    "Confirmar Eliminación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (resultado != DialogResult.Yes)
+                    return;
+
+                Productos.EliminarProductoCompleto(idProducto);
+
+                MessageBox.Show("Producto eliminado correctamente.");
+                VerDatagriv();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }   
     }
 }

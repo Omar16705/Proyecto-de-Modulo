@@ -156,42 +156,36 @@ namespace Sistema_de_inventario.UserControls
         {
             try
             {
-                // Validar que hay una fila seleccionada
                 if (dgvVerUsuarios.CurrentRow == null)
                 {
-                    MessageBox.Show("Debe seleccionar un usuario para eliminar.");
+                    MessageBox.Show("Debe seleccionar un usuario.");
                     return;
                 }
 
-                // Validar que la celda contiene un valor válido
-                var cellValue = dgvVerUsuarios.CurrentRow.Cells["IdUsuario"].Value;
-                if (cellValue == null || string.IsNullOrWhiteSpace(cellValue.ToString()))
+                var cellValue = dgvVerUsuarios.CurrentRow.Cells["ID Usuario"].Value;
+
+                if (cellValue == null || !int.TryParse(cellValue.ToString(), out int idUsuario))
                 {
-                    MessageBox.Show("El usuario seleccionado no tiene un ID válido.");
+                    MessageBox.Show("ID inválido.");
                     return;
                 }
 
-                // Validar que el ID es un número entero
-                if (!int.TryParse(cellValue.ToString(), out int idUsuario))
-                {
-                    MessageBox.Show("El ID del usuario no es válido.");
-                    return;
-                }
+                DialogResult resultado = MessageBox.Show(
+                    "⚠ Esta acción eliminará el usuario de forma permanente.\n\n¿Desea continuar?",
+                    "Confirmar eliminación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
 
-                // Confirmación opcional
-                var confirm = MessageBox.Show("¿Está seguro que desea eliminar este usuario?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (confirm != DialogResult.Yes)
-                {
+                if (resultado != DialogResult.Yes)
                     return;
-                }
 
-                // Eliminar usuario
                 Usuario usuario = new Usuario();
-                usuario.IdUsuario1 = idUsuario;
-                usuario.EliminarUsuario();
-                VerUsuarios();
+
+
+                usuario.EliminarUsuarios(idUsuario);
 
                 MessageBox.Show("Usuario eliminado correctamente.");
+                VerUsuarios(); // Método que refresca el DataGridView
             }
             catch (Exception ex)
             {
@@ -216,13 +210,7 @@ namespace Sistema_de_inventario.UserControls
                     MessageBox.Show("El correo electrónico es obligatorio.");
                     return;
                 }
-
-                if (string.IsNullOrWhiteSpace(txtClave.Text))
-                {
-                    MessageBox.Show("La clave es obligatoria.");
-                    return;
-                }
-
+                
                 if (cmbRol.SelectedIndex == -1)
                 {
                     MessageBox.Show("Debe seleccionar un rol.");
@@ -236,24 +224,19 @@ namespace Sistema_de_inventario.UserControls
                     return;
                 }
 
-                // Validar longitud de clave
-                if (txtClave.Text.Length < 6)
-                {
-                    MessageBox.Show("La clave debe tener al menos 6 caracteres.");
-                    return;
-                }
+              
 
                 // Crear y asignar usuario
                 Usuario usuario = new Usuario();
-                usuario.NombreCompletoUsuario1 = txtNombreUsuario.Text.Trim();
-                usuario.CorrreoElectronico1 = txtCorreoElectronico.Text.Trim();
-                usuario.Clave1 = BCrypt.Net.BCrypt.HashPassword(txtClave.Text);
+                usuario.NombreCompletoUsuario1 = txtNombreUsuario.Text;
+                usuario.CorrreoElectronico1 = txtCorreoElectronico.Text;
                 usuario.IdRol1 = Convert.ToInt32(cmbRol.SelectedValue);
+                usuario.IdUsuario1 = Convert.ToInt32(dgvVerUsuarios.CurrentRow.Cells["idUsuario"].Value);
 
                 usuario.ActualizarUsuario();
                 VerUsuarios();
 
-                MessageBox.Show("Usuario registrado correctamente.");
+                MessageBox.Show("Usuario Actualizado correctamente.");
             }
             catch (Exception ex)
             {
@@ -277,6 +260,21 @@ namespace Sistema_de_inventario.UserControls
             txtNombreUsuario.Text = dgvVerUsuarios.CurrentRow.Cells["NombreCompletoUsuario"].Value.ToString();
             txtCorreoElectronico.Text = dgvVerUsuarios.CurrentRow.Cells["correoUsuario"].Value.ToString();
             cmbRol.SelectedValue = dgvVerUsuarios.CurrentRow.Cells["rol_id"].Value;
+        }
+
+        private void btnVerClave_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtClave.PasswordChar = '\0';
+        }
+
+        private void btnVerClave_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void btnVerClave_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtClave.PasswordChar = '*';
         }
     }
 }

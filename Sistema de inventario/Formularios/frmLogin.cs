@@ -132,5 +132,10 @@ namespace Sistema_de_inventario.Formularios
         {
             txtClave.PasswordChar = '\0';
         }
+
+        private void btnVerClave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
