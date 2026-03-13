@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace Sistema_de_inventario.Formularios
         public frmDashboard()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.Sizable;
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
@@ -60,10 +62,6 @@ namespace Sistema_de_inventario.Formularios
         }
 
 
-
-
-
-
         #endregion
 
         private void NivelUsuario() {
@@ -99,8 +97,7 @@ namespace Sistema_de_inventario.Formularios
 
         private void btnGestionProductos_Click(object sender, EventArgs e)
         {
-            pnlCentral.Controls.Clear();
-           pnlCentral.Controls.Add(new frmGestionProductos());  
+            AbrirForms(new frmGestionProductos());
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -115,14 +112,12 @@ namespace Sistema_de_inventario.Formularios
 
         private void btnGestionProveedores_Click(object sender, EventArgs e)
         {
-            pnlCentral.Controls.Clear();
-            pnlCentral.Controls.Add(new frmGestionProveedores());
+            AbrirForms(new frmGestionProveedores());
         }
 
         private void btnGestionUsuarios_Click(object sender, EventArgs e)
         {
-            pnlCentral.Controls.Clear();
-            pnlCentral.Controls.Add(new frmRegistrar());
+            AbrirForms(new frmRegistrar());
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
@@ -142,14 +137,60 @@ namespace Sistema_de_inventario.Formularios
 
         private void btnGestionVentas_Click(object sender, EventArgs e)
         {
-            pnlCentral.Controls.Clear();    
-            pnlCentral.Controls.Add(new frmGestionVentas());
+            AbrirForms(new frmGestionVentas());
         }
 
         private void btnGestionInventario_Click(object sender, EventArgs e)
         {
-            pnlCentral.Controls.Clear();
-            pnlCentral.Controls.Add(new frmGestionInventario());
+            AbrirForms(new frmGestionInventario());
+        }
+
+        private void frmDashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit(); // Cierra toda la aplicación al cerrar el dashboard
+        }
+
+        private void frmDashboard_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                AjustarPanelesPantallaCompleta();
+            }
+            else if (this.WindowState == FormWindowState.Normal)
+            {
+                RestaurarPaneles();
+            }
+        }
+
+        private void AjustarPanelesPantallaCompleta()
+        {
+            // El pnlCentral ya tiene DockStyle.Fill, debería ajustarse automáticamente, pero asegurémonos de que los formularios hijos también se ajusten
+            if (pnlCentral.Controls.Count > 0)
+            {
+                foreach (Control control in pnlCentral.Controls)
+                {
+                    if (control is Form formHijo)
+                    {
+                        formHijo.WindowState = FormWindowState.Maximized;
+                        formHijo.Dock = DockStyle.Fill;
+                    }
+                }
+            }
+        }
+
+        private void RestaurarPaneles()
+        {
+            if (pnlCentral.Controls.Count > 0)
+            {
+                foreach (Control control in pnlCentral.Controls)
+                {
+                    if (control is Form formHijo)
+                    {
+                        formHijo.WindowState = FormWindowState.Normal;
+                        formHijo.Dock = DockStyle.Fill;
+                    }
+                }
+            }
         }
     }
 }

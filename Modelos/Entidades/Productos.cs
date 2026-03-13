@@ -36,7 +36,7 @@ namespace Modelos.Entidades
             {
                 using (SqlConnection conn = Conexion.conectar())
                 {
-                    string query = "select idProducto as 'ID Producto', CodigoProducto as 'Codigo Producto', NombreProducto as 'Nombre del Producto', categoria_id as 'ID Categoria', Proveedor_id as 'ID Proveedor', Stock, PrecioCompra as 'Precio de Compra', PrecioVenta as 'Precio de Venta' from Productos";
+                    string query = "select idProducto as 'ID Producto', CodigoProducto as 'Codigo Producto', NombreProducto as 'Nombre del Producto', categoria_id as 'ID Categoria', Categoria.NombreCategoria as 'Categoría', Proveedor_id as 'ID Proveedor', Proveedores.NombreProveedor as 'Proveedor', Stock, PrecioCompra as 'Precio de Compra', PrecioVenta as 'Precio de Venta' from Productos\r\ninner join Categoria on Categoria.idCategoria=Productos.categoria_id\r\ninner join Proveedores on Proveedores.idProveedor=Productos.Proveedor_id";
                     SqlDataAdapter da = new SqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);

@@ -66,7 +66,6 @@
             // 
             // pnlNavegacion
             // 
-            this.pnlNavegacion.AutoScroll = true;
             this.pnlNavegacion.AutoScrollMargin = new System.Drawing.Size(2, 2);
             this.pnlNavegacion.AutoScrollMinSize = new System.Drawing.Size(0, 525);
             this.pnlNavegacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(77)))), ((int)(((byte)(86)))));
@@ -92,7 +91,7 @@
             this.btnGestionInventario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGestionInventario.Location = new System.Drawing.Point(0, 422);
             this.btnGestionInventario.Name = "btnGestionInventario";
-            this.btnGestionInventario.Size = new System.Drawing.Size(237, 54);
+            this.btnGestionInventario.Size = new System.Drawing.Size(254, 54);
             this.btnGestionInventario.TabIndex = 7;
             this.btnGestionInventario.Text = "Gestión de Inventario";
             this.btnGestionInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,7 +107,7 @@
             this.btnGestionVentas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGestionVentas.Location = new System.Drawing.Point(0, 368);
             this.btnGestionVentas.Name = "btnGestionVentas";
-            this.btnGestionVentas.Size = new System.Drawing.Size(237, 54);
+            this.btnGestionVentas.Size = new System.Drawing.Size(254, 54);
             this.btnGestionVentas.TabIndex = 6;
             this.btnGestionVentas.Text = "Gestión de Ventas";
             this.btnGestionVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -124,7 +123,7 @@
             this.btnGestionUsuarios.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGestionUsuarios.Location = new System.Drawing.Point(0, 314);
             this.btnGestionUsuarios.Name = "btnGestionUsuarios";
-            this.btnGestionUsuarios.Size = new System.Drawing.Size(237, 54);
+            this.btnGestionUsuarios.Size = new System.Drawing.Size(254, 54);
             this.btnGestionUsuarios.TabIndex = 4;
             this.btnGestionUsuarios.Text = "Gestión de Usuarios";
             this.btnGestionUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -140,7 +139,7 @@
             this.btnGestionProductos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGestionProductos.Location = new System.Drawing.Point(0, 260);
             this.btnGestionProductos.Name = "btnGestionProductos";
-            this.btnGestionProductos.Size = new System.Drawing.Size(237, 54);
+            this.btnGestionProductos.Size = new System.Drawing.Size(254, 54);
             this.btnGestionProductos.TabIndex = 2;
             this.btnGestionProductos.Text = "Gestión de Productos";
             this.btnGestionProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,7 +155,7 @@
             this.btnGestionProveedores.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGestionProveedores.Location = new System.Drawing.Point(0, 206);
             this.btnGestionProveedores.Name = "btnGestionProveedores";
-            this.btnGestionProveedores.Size = new System.Drawing.Size(237, 54);
+            this.btnGestionProveedores.Size = new System.Drawing.Size(254, 54);
             this.btnGestionProveedores.TabIndex = 3;
             this.btnGestionProveedores.Text = "Gestión de Proveedores";
             this.btnGestionProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -170,9 +169,9 @@
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 527);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 507);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(237, 54);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(254, 54);
             this.btnCerrarSesion.TabIndex = 5;
             this.btnCerrarSesion.Text = "Cerrar Sesion";
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -186,7 +185,7 @@
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(237, 206);
+            this.pnlLogo.Size = new System.Drawing.Size(254, 206);
             this.pnlLogo.TabIndex = 0;
             // 
             // label2
@@ -221,7 +220,8 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
@@ -231,7 +231,7 @@
             this.lblNivelUsuario});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(880, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(333, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -293,7 +293,9 @@
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard-Usuario";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDashboard_FormClosed);
             this.Load += new System.EventHandler(this.frmDashboard_Load);
+            this.Resize += new System.EventHandler(this.frmDashboard_Resize);
             this.pnlNavegacion.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();

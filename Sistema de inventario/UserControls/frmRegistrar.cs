@@ -12,11 +12,19 @@ using System.Windows.Forms;
 
 namespace Sistema_de_inventario.UserControls
 {
-    public partial class frmRegistrar : UserControl
+    public partial class frmRegistrar : Form
     {
         public frmRegistrar()
         {
             InitializeComponent();
+        }
+
+        private void LimpiarCampos()
+        {
+            txtNombreUsuario.Clear();
+            txtCorreoElectronico.Clear();
+            txtClave.Clear();
+            cmbRol.SelectedIndex = -1;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -71,6 +79,7 @@ namespace Sistema_de_inventario.UserControls
 
                 usuario.InsertarUsuario();
                 VerUsuarios();
+                LimpiarCampos();
 
                 MessageBox.Show("Usuario registrado correctamente.");
             }
@@ -92,6 +101,11 @@ namespace Sistema_de_inventario.UserControls
         {
 
             dgvVerUsuarios.DataSource = Usuario.MostrarUsuarios().Tables["USUARIOS"];
+            if (dgvVerUsuarios.Columns.Contains("ID Usuario"))
+                dgvVerUsuarios.Columns["ID Usuario"].Visible = false;
+
+            if (dgvVerUsuarios.Columns.Contains("ID Rol"))
+                dgvVerUsuarios.Columns["ID Rol"].Visible = false;
         }
 
 
@@ -183,7 +197,7 @@ namespace Sistema_de_inventario.UserControls
 
 
                 usuario.EliminarUsuarios(idUsuario);
-
+                LimpiarCampos();
                 MessageBox.Show("Usuario eliminado correctamente.");
                 VerUsuarios(); // Método que refresca el DataGridView
             }
@@ -231,10 +245,11 @@ namespace Sistema_de_inventario.UserControls
                 usuario.NombreCompletoUsuario1 = txtNombreUsuario.Text;
                 usuario.CorrreoElectronico1 = txtCorreoElectronico.Text;
                 usuario.IdRol1 = Convert.ToInt32(cmbRol.SelectedValue);
-                usuario.IdUsuario1 = Convert.ToInt32(dgvVerUsuarios.CurrentRow.Cells["idUsuario"].Value);
+                usuario.IdUsuario1 = Convert.ToInt32(dgvVerUsuarios.CurrentRow.Cells["ID Usuario"].Value);
 
                 usuario.ActualizarUsuario();
                 VerUsuarios();
+                LimpiarCampos();
 
                 MessageBox.Show("Usuario Actualizado correctamente.");
             }
@@ -246,20 +261,14 @@ namespace Sistema_de_inventario.UserControls
 
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
         {
-            txtClave.Clear();
-            txtCorreoElectronico.Clear();
-            txtNombreUsuario.Clear();
-            cmbRol.SelectedIndex = -1;
-            txtNombreUsuario.Focus();
-            txtCorreoElectronico.Focus();
-
+            LimpiarCampos();
         }
 
         private void dgvVerUsuarios_DoubleClick(object sender, EventArgs e)
         {
-            txtNombreUsuario.Text = dgvVerUsuarios.CurrentRow.Cells["NombreCompletoUsuario"].Value.ToString();
-            txtCorreoElectronico.Text = dgvVerUsuarios.CurrentRow.Cells["correoUsuario"].Value.ToString();
-            cmbRol.SelectedValue = dgvVerUsuarios.CurrentRow.Cells["rol_id"].Value;
+            txtNombreUsuario.Text = dgvVerUsuarios.CurrentRow.Cells["Nombre Completo"].Value.ToString();
+            txtCorreoElectronico.Text = dgvVerUsuarios.CurrentRow.Cells["Correo Electrónico"].Value.ToString();
+            cmbRol.SelectedValue = dgvVerUsuarios.CurrentRow.Cells["ID Rol"].Value;
         }
 
         private void btnVerClave_MouseDown(object sender, MouseEventArgs e)

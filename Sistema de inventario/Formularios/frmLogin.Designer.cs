@@ -188,7 +188,7 @@
             this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(273, 24);
             this.txtClave.TabIndex = 26;
-            this.txtClave.Text = "Q*werty1";
+            this.txtClave.Text = "12E456/8";
             // 
             // txtUsuario
             // 

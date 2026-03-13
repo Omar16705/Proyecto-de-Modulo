@@ -28,6 +28,11 @@ namespace Modelos.Entidades
         public string Clave1 { get => Clave; set => Clave = value; }
         public int IdRol1 { get => IdRol; set => IdRol = value; }
 
+        public string ClaveEnmascarada
+        {
+            get { return "********"; }
+        }
+
         public bool UsuarioExiste(string username)
         {
             try
@@ -108,14 +113,20 @@ namespace Modelos.Entidades
         }
 
 
-
+        // Modifica el método MostrarUsuarios()
         public static DataSet MostrarUsuarios()
         {
             try
             {
                 SqlConnection conexion = Conexion.conectar();
                 conexion.Open();
-                string query = "select * from Usuarios";
+                string query = @"SELECT  idUsuario as 'ID Usuario', NombreCompletoUsuario as 'Nombre Completo', correoUsuario as 'Correo Electrónico', '********' as 'Clave', rol_id as 'ID Rol', CASE 
+                WHEN rol_id = 1 THEN 'Administrador'
+                WHEN rol_id = 2 THEN 'Vendedor'
+                WHEN rol_id = 3 THEN 'Almacenista'
+                ELSE 'Desconocido' END as 'Rol'
+            FROM Usuarios";
+
                 SqlDataAdapter da = new SqlDataAdapter(query, conexion);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "USUARIOS");
@@ -128,7 +139,6 @@ namespace Modelos.Entidades
                 return null;
             }
         }
-
         public bool InsertarUsuario()
         {
             try

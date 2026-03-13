@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.lblIdRol = new System.Windows.Forms.Label();
@@ -39,11 +41,11 @@
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.lblRegistrarse = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVerClave = new System.Windows.Forms.Button();
             this.btnEliminarUsuarios = new System.Windows.Forms.Button();
             this.btnActuali = new System.Windows.Forms.Button();
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.dgvVerUsuarios = new System.Windows.Forms.DataGridView();
-            this.btnVerClave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -172,9 +174,22 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(874, 253);
+            this.panel1.Size = new System.Drawing.Size(858, 253);
             this.panel1.TabIndex = 20;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnVerClave
+            // 
+            this.btnVerClave.BackColor = System.Drawing.SystemColors.Control;
+            this.btnVerClave.Image = global::Sistema_de_inventario.Properties.Resources.icons8_ojo_28;
+            this.btnVerClave.Location = new System.Drawing.Point(521, 163);
+            this.btnVerClave.Name = "btnVerClave";
+            this.btnVerClave.Size = new System.Drawing.Size(63, 23);
+            this.btnVerClave.TabIndex = 32;
+            this.btnVerClave.UseVisualStyleBackColor = false;
+            this.btnVerClave.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnVerClave_MouseDown);
+            this.btnVerClave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnVerClave_MouseMove);
+            this.btnVerClave.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnVerClave_MouseUp);
             // 
             // btnEliminarUsuarios
             // 
@@ -220,36 +235,39 @@
             // 
             // dgvVerUsuarios
             // 
-            this.dgvVerUsuarios.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvVerUsuarios.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Sans", 14F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVerUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVerUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVerUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVerUsuarios.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvVerUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVerUsuarios.Location = new System.Drawing.Point(0, 253);
             this.dgvVerUsuarios.Name = "dgvVerUsuarios";
-            this.dgvVerUsuarios.Size = new System.Drawing.Size(874, 283);
+            this.dgvVerUsuarios.Size = new System.Drawing.Size(858, 244);
             this.dgvVerUsuarios.TabIndex = 21;
             this.dgvVerUsuarios.DoubleClick += new System.EventHandler(this.dgvVerUsuarios_DoubleClick);
-            // 
-            // btnVerClave
-            // 
-            this.btnVerClave.BackColor = System.Drawing.SystemColors.Control;
-            this.btnVerClave.Image = global::Sistema_de_inventario.Properties.Resources.icons8_ojo_28;
-            this.btnVerClave.Location = new System.Drawing.Point(521, 163);
-            this.btnVerClave.Name = "btnVerClave";
-            this.btnVerClave.Size = new System.Drawing.Size(63, 23);
-            this.btnVerClave.TabIndex = 32;
-            this.btnVerClave.UseVisualStyleBackColor = false;
-            this.btnVerClave.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnVerClave_MouseDown);
-            this.btnVerClave.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnVerClave_MouseMove);
-            this.btnVerClave.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnVerClave_MouseUp);
             // 
             // frmRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(858, 497);
             this.Controls.Add(this.dgvVerUsuarios);
             this.Controls.Add(this.panel1);
             this.Name = "frmRegistrar";
-            this.Size = new System.Drawing.Size(874, 536);
             this.Load += new System.EventHandler(this.frmRegistrar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

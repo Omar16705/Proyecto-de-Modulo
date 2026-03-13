@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Sistema_de_inventario.UserControls
 {
-    public partial class frmGestionInventario : UserControl
+    public partial class frmGestionInventario : Form
     {
         public frmGestionInventario()
         {

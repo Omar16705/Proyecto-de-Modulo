@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnActualizarVenta = new System.Windows.Forms.Button();
             this.btnEliminarVenta = new System.Windows.Forms.Button();
@@ -78,7 +80,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(874, 294);
+            this.panel1.Size = new System.Drawing.Size(858, 294);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -282,12 +284,28 @@
             // 
             // dgvVerGestionVentas
             // 
-            this.dgvVerGestionVentas.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvVerGestionVentas.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVerGestionVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVerGestionVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVerGestionVentas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVerGestionVentas.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvVerGestionVentas.Location = new System.Drawing.Point(0, 294);
             this.dgvVerGestionVentas.Name = "dgvVerGestionVentas";
-            this.dgvVerGestionVentas.Size = new System.Drawing.Size(874, 240);
+            this.dgvVerGestionVentas.Size = new System.Drawing.Size(858, 206);
             this.dgvVerGestionVentas.TabIndex = 1;
             this.dgvVerGestionVentas.DoubleClick += new System.EventHandler(this.dgvVerGestionVentas_DoubleClick);
             // 
@@ -295,10 +313,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(858, 497);
             this.Controls.Add(this.dgvVerGestionVentas);
             this.Controls.Add(this.panel1);
             this.Name = "frmGestionVentas";
-            this.Size = new System.Drawing.Size(874, 536);
             this.Load += new System.EventHandler(this.frmGestionVentas_Load);
             this.Leave += new System.EventHandler(this.frmGestionVentas_Leave);
             this.panel1.ResumeLayout(false);

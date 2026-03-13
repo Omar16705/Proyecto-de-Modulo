@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvGestionInventario = new System.Windows.Forms.DataGridView();
@@ -42,7 +44,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(874, 63);
+            this.panel1.Size = new System.Drawing.Size(858, 63);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -58,23 +60,39 @@
             // 
             // dgvGestionInventario
             // 
-            this.dgvGestionInventario.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvGestionInventario.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGestionInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvGestionInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Console", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGestionInventario.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvGestionInventario.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvGestionInventario.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvGestionInventario.Location = new System.Drawing.Point(0, 63);
             this.dgvGestionInventario.Name = "dgvGestionInventario";
-            this.dgvGestionInventario.Size = new System.Drawing.Size(874, 473);
+            this.dgvGestionInventario.Size = new System.Drawing.Size(858, 422);
             this.dgvGestionInventario.TabIndex = 1;
             // 
             // frmGestionInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(858, 497);
             this.Controls.Add(this.dgvGestionInventario);
             this.Controls.Add(this.panel1);
             this.Name = "frmGestionInventario";
-            this.Size = new System.Drawing.Size(874, 536);
             this.Load += new System.EventHandler(this.frmGestionInventario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

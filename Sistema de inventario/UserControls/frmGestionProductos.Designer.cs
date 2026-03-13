@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dgvVerProductos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbmProveedor = new System.Windows.Forms.ComboBox();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
@@ -48,10 +49,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvVerProductos = new System.Windows.Forms.DataGridView();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerProductos)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // dgvVerProductos
+            // 
+            this.dgvVerProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvVerProductos.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvVerProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVerProductos.Location = new System.Drawing.Point(0, 291);
+            this.dgvVerProductos.Name = "dgvVerProductos";
+            this.dgvVerProductos.Size = new System.Drawing.Size(881, 205);
+            this.dgvVerProductos.TabIndex = 1;
+            this.dgvVerProductos.DoubleClick += new System.EventHandler(this.dgvVerProductos_DoubleClick);
             // 
             // panel1
             // 
@@ -78,7 +90,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(874, 291);
+            this.panel1.Size = new System.Drawing.Size(881, 291);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -274,29 +286,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Gestion de Productos";
             // 
-            // dgvVerProductos
-            // 
-            this.dgvVerProductos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvVerProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVerProductos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvVerProductos.Location = new System.Drawing.Point(0, 291);
-            this.dgvVerProductos.Name = "dgvVerProductos";
-            this.dgvVerProductos.Size = new System.Drawing.Size(874, 272);
-            this.dgvVerProductos.TabIndex = 1;
-            this.dgvVerProductos.DoubleClick += new System.EventHandler(this.dgvVerProductos_DoubleClick);
-            // 
             // frmGestionProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(881, 497);
             this.Controls.Add(this.dgvVerProductos);
             this.Controls.Add(this.panel1);
             this.Name = "frmGestionProductos";
-            this.Size = new System.Drawing.Size(874, 536);
             this.Load += new System.EventHandler(this.frmGestionProductos_Load);
+            this.Resize += new System.EventHandler(this.frmGestionProductos_Resize);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerProductos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVerProductos)).EndInit();
             this.ResumeLayout(false);
 
         }

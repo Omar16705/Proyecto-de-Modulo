@@ -1,26 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\omara\\Desktop\\Sistema y Base de Datos\\Sistema de Gestion de Inventario. ACTV SOCIALES\\",
+  "WorkspaceRootPath": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\sistema y base de datos\\sistema de gestion de inventario. actv sociales\\sistema de inventario\\formularios\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\formularios\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\ferme\\documentos\\colegio\\rical\\2\u00B0 a\u00F1o\\sociales\\sistema y base de datos\\proyecto-de-modulo\\sistema de inventario\\usercontrols\\frmregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\sistema y base de datos\\sistema de gestion de inventario. actv sociales\\sistema de inventario\\formularios\\frmrestablecerclave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\formularios\\frmrestablecerclave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\ferme\\documentos\\colegio\\rical\\2\u00B0 a\u00F1o\\sociales\\sistema y base de datos\\proyecto-de-modulo\\sistema de inventario\\usercontrols\\frmregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmregistrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\sistema y base de datos\\sistema de gestion de inventario. actv sociales\\sistema de inventario\\formularios\\frmrestablecerclave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\formularios\\frmrestablecerclave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}|Modelos\\CapaDatos.csproj|c:\\users\\ferme\\documentos\\colegio\\rical\\2\u00B0 a\u00F1o\\sociales\\sistema y base de datos\\proyecto-de-modulo\\modelos\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}|Modelos\\CapaDatos.csproj|solutionrelative:modelos\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\sistema y base de datos\\sistema de gestion de inventario. actv sociales\\sistema de inventario\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\ferme\\documentos\\colegio\\rical\\2\u00B0 a\u00F1o\\sociales\\sistema y base de datos\\proyecto-de-modulo\\sistema de inventario\\usercontrols\\frmgestionventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmgestionventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\omara\\desktop\\sistema y base de datos\\sistema de gestion de inventario. actv sociales\\sistema de inventario\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\ferme\\documentos\\colegio\\rical\\2\u00B0 a\u00F1o\\sociales\\sistema y base de datos\\proyecto-de-modulo\\sistema de inventario\\usercontrols\\frmgestionproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmgestionproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|c:\\users\\ferme\\documentos\\colegio\\rical\\2\u00B0 a\u00F1o\\sociales\\sistema y base de datos\\proyecto-de-modulo\\sistema de inventario\\usercontrols\\frmgestionproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmgestionproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\sistema de inventario\\usercontrols\\frmgestionventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{972ADB84-D694-4FE2-9DFE-B505C6E29D6F}|Sistema de inventario\\Vistas.csproj|solutionrelative:sistema de inventario\\usercontrols\\frmgestionventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}|Modelos\\CapaDatos.csproj|c:\\users\\ferme\\documentos\\colegio\\rical\\2\u00B0 a\u00F1o\\sociales\\sistema y base de datos\\proyecto-de-modulo\\modelos\\entidades\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5AF0BD1-68B8-45AF-90F6-644ECF414B8F}|Modelos\\CapaDatos.csproj|solutionrelative:modelos\\entidades\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,69 +42,120 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmDashboard.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Sistema y Base de Datos\\Sistema de Gestion de Inventario. ACTV SOCIALES\\Sistema de inventario\\Formularios\\frmDashboard.cs",
-              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmDashboard.cs",
-              "ToolTip": "C:\\Users\\omara\\Desktop\\Sistema y Base de Datos\\Sistema de Gestion de Inventario. ACTV SOCIALES\\Sistema de inventario\\Formularios\\frmDashboard.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmDashboard.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T01:51:50.555Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmLogin.cs",
-              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Sistema y Base de Datos\\Sistema de Gestion de Inventario. ACTV SOCIALES\\Sistema de inventario\\Formularios\\frmLogin.cs",
-              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\omara\\Desktop\\Sistema y Base de Datos\\Sistema de Gestion de Inventario. ACTV SOCIALES\\Sistema de inventario\\Formularios\\frmLogin.cs",
-              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmLogin.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAIwH8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T01:48:42.001Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmRestablecerClave.cs",
-              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Sistema y Base de Datos\\Sistema de Gestion de Inventario. ACTV SOCIALES\\Sistema de inventario\\Formularios\\frmRestablecerClave.cs",
-              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmRestablecerClave.cs",
-              "ToolTip": "C:\\Users\\omara\\Desktop\\Sistema y Base de Datos\\Sistema de Gestion de Inventario. ACTV SOCIALES\\Sistema de inventario\\Formularios\\frmRestablecerClave.cs",
-              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmRestablecerClave.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAgwH4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T01:48:12.455Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmRestablecerClave.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Sistema y Base de Datos\\Sistema de Gestion de Inventario. ACTV SOCIALES\\Sistema de inventario\\Formularios\\frmRestablecerClave.cs",
-              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmRestablecerClave.cs",
-              "ToolTip": "C:\\Users\\omara\\Desktop\\Sistema y Base de Datos\\Sistema de Gestion de Inventario. ACTV SOCIALES\\Sistema de inventario\\Formularios\\frmRestablecerClave.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmRestablecerClave.cs [Dise\u00F1o]",
+              "Title": "frmRegistrar.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmRegistrar.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmRegistrar.cs",
+              "ToolTip": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmRegistrar.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmRegistrar.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T01:46:18.211Z",
+              "WhenOpened": "2026-03-13T02:35:28.509Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Modelos\\Entidades\\Usuario.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Usuario.cs",
+              "ToolTip": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Modelos\\Entidades\\Usuario.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Usuario.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T02:34:13.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmRegistrar.cs",
+              "DocumentMoniker": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmRegistrar.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmRegistrar.cs",
+              "ToolTip": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmRegistrar.cs",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmRegistrar.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAWwLwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T02:33:07.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmGestionVentas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionVentas.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmGestionVentas.cs",
+              "ToolTip": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionVentas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmGestionVentas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T02:31:51.159Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "frmLogin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\omara\\Desktop\\Sistema y Base de Datos\\Sistema de Gestion de Inventario. ACTV SOCIALES\\Sistema de inventario\\Formularios\\frmLogin.cs",
-              "RelativeDocumentMoniker": "Sistema de inventario\\Formularios\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\omara\\Desktop\\Sistema y Base de Datos\\Sistema de Gestion de Inventario. ACTV SOCIALES\\Sistema de inventario\\Formularios\\frmLogin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Sistema de inventario\\Formularios\\frmLogin.cs [Dise\u00F1o]",
+              "Title": "frmGestionProductos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionProductos.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmGestionProductos.cs",
+              "ToolTip": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionProductos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmGestionProductos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T01:43:12.069Z",
+              "WhenOpened": "2026-03-13T02:29:45.853Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Productos.cs",
+              "DocumentMoniker": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Modelos\\Entidades\\Productos.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Productos.cs",
+              "ToolTip": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Modelos\\Entidades\\Productos.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Productos.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T02:16:13.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmGestionProductos.cs",
+              "DocumentMoniker": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionProductos.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmGestionProductos.cs",
+              "ToolTip": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionProductos.cs",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmGestionProductos.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAtwEAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T02:16:21.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmGestionVentas.cs",
+              "DocumentMoniker": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionVentas.cs",
+              "RelativeDocumentMoniker": "Sistema de inventario\\UserControls\\frmGestionVentas.cs",
+              "ToolTip": "C:\\Users\\ferme\\Documentos\\Colegio\\Rical\\2\u00B0 A\u00F1o\\Sociales\\Sistema y Base de Datos\\Proyecto-de-Modulo\\Sistema de inventario\\UserControls\\frmGestionVentas.cs",
+              "RelativeToolTip": "Sistema de inventario\\UserControls\\frmGestionVentas.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAvwE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T00:14:49.581Z",
+              "EditorCaption": ""
             }
           ]
         }

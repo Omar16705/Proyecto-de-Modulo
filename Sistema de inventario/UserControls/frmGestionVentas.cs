@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Sistema_de_inventario.UserControls
 {
-    public partial class frmGestionVentas : UserControl
+    public partial class frmGestionVentas : Form
     {
         public frmGestionVentas()
         {
@@ -68,6 +68,15 @@ namespace Sistema_de_inventario.UserControls
         {
            dgvVerGestionVentas.DataSource = null;
             dgvVerGestionVentas.DataSource = Ventas.MostrarVentas();
+
+            if (dgvVerGestionVentas.Columns.Contains("ID Usuario"))
+                dgvVerGestionVentas.Columns["ID Usuario"].Visible = false;
+
+            if (dgvVerGestionVentas.Columns.Contains("ID Producto"))
+                dgvVerGestionVentas.Columns["ID Producto"].Visible = false;
+
+            if (dgvVerGestionVentas.Columns.Contains("ID Tipo Venta"))
+                dgvVerGestionVentas.Columns["ID Tipo Venta"].Visible = false;
         }
 
 
@@ -175,31 +184,43 @@ namespace Sistema_de_inventario.UserControls
 
 
             Ventas nuevaVenta = new Ventas();
-            nuevaVenta.Usuario_id = Convert.ToInt32(cmbUsuario.SelectedValue.ToString());
-            nuevaVenta.Producto_id = Convert.ToInt32(cmbProducto.SelectedValue.ToString());
-            nuevaVenta.TipoDocumento_id = Convert.ToInt32(cmbTipoDocumento.SelectedValue.ToString());
+            nuevaVenta.Usuario_id = Convert.ToInt32(cmbUsuario.SelectedValue);
+            nuevaVenta.Producto_id = Convert.ToInt32(cmbProducto.SelectedValue);
+            nuevaVenta.TipoDocumento_id = Convert.ToInt32(cmbTipoDocumento.SelectedValue);
             nuevaVenta.Cantidad = int.Parse(txtCantidad.Text);
             nuevaVenta.MontoPago = decimal.Parse(txtMontoPago.Text);
             nuevaVenta.MontoCambio = decimal.Parse(txtMontoCambio.Text);
             nuevaVenta.MontoTotal = decimal.Parse(txtMontoTotal.Text);
-            nuevaVenta.InsertarVenta(nuevaVenta);
-            MostrarInformacionDGV();
-            MessageBox.Show("Venta agregada con éxito");
-
-
+            if (nuevaVenta.InsertarVenta(nuevaVenta))
+            {
+                MostrarInformacionDGV();
+                btnLimpiar_Click(sender, e);
+                MessageBox.Show("Venta agregada con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
 
         private void dgvVerGestionVentas_DoubleClick(object sender, EventArgs e)
         {
-           cmbUsuario.SelectedValue = dgvVerGestionVentas.CurrentRow.Cells["usuario_id"].Value.ToString();
-            cmbProducto.SelectedValue = dgvVerGestionVentas.CurrentRow.Cells["producto_id"].Value.ToString();
-            cmbTipoDocumento.SelectedValue = dgvVerGestionVentas.CurrentRow.Cells["tipoDocumentoVenta_id"].Value.ToString();
-            txtCantidad.Text = dgvVerGestionVentas.CurrentRow.Cells["Cantidad"].Value.ToString();
-            txtMontoPago.Text = dgvVerGestionVentas.CurrentRow.Cells["MontoPago"].Value.ToString();
-            txtMontoCambio.Text = dgvVerGestionVentas.CurrentRow.Cells["MontoCambio"].Value.ToString();
-            txtMontoTotal.Text = dgvVerGestionVentas.CurrentRow.Cells["MontoTotal"].Value.ToString();
+            // Verificar que hay una fila seleccionada
+            if (dgvVerGestionVentas.CurrentRow == null)
+                return;
 
+            try
+            {
+                // Usar los nombres de columna EXACTOS que devuelve la consulta
+                cmbUsuario.SelectedValue = dgvVerGestionVentas.CurrentRow.Cells["ID Usuario"].Value;
+                cmbProducto.SelectedValue = dgvVerGestionVentas.CurrentRow.Cells["ID Producto"].Value;
+                cmbTipoDocumento.SelectedValue = dgvVerGestionVentas.CurrentRow.Cells["ID Tipo Venta"].Value;
+                txtCantidad.Text = dgvVerGestionVentas.CurrentRow.Cells["Cantidad"].Value.ToString();
+                txtMontoPago.Text = dgvVerGestionVentas.CurrentRow.Cells["Pago"].Value.ToString();
+                txtMontoCambio.Text = dgvVerGestionVentas.CurrentRow.Cells["Cambio"].Value.ToString();
+                txtMontoTotal.Text = dgvVerGestionVentas.CurrentRow.Cells["Total"].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar datos: " + ex.Message);
+            }
         }
 
         private void btnActualizarVenta_Click(object sender, EventArgs e)
@@ -245,22 +266,23 @@ namespace Sistema_de_inventario.UserControls
                 return;
             }
 
+            Ventas ventaActualizar = new Ventas();
+            ventaActualizar.IdVenta = Convert.ToInt32(dgvVerGestionVentas.CurrentRow.Cells["ID Venta"].Value);
+            ventaActualizar.Usuario_id = Convert.ToInt32(cmbUsuario.SelectedValue);
+            ventaActualizar.Producto_id = Convert.ToInt32(cmbProducto.SelectedValue);
+            ventaActualizar.TipoDocumento_id = Convert.ToInt32(cmbTipoDocumento.SelectedValue);
+            ventaActualizar.Cantidad = int.Parse(txtCantidad.Text);
+            ventaActualizar.MontoPago = decimal.Parse(txtMontoPago.Text);
+            ventaActualizar.MontoCambio = decimal.Parse(txtMontoCambio.Text);
+            ventaActualizar.MontoTotal = decimal.Parse(txtMontoTotal.Text);
 
-
-
-            Ventas nuevaVenta = new Ventas();
-            nuevaVenta.Usuario_id = Convert.ToInt32(cmbUsuario.SelectedValue.ToString());
-            nuevaVenta.Producto_id = Convert.ToInt32(cmbProducto.SelectedValue.ToString());
-            nuevaVenta.TipoDocumento_id = Convert.ToInt32(cmbTipoDocumento.SelectedValue.ToString());
-            nuevaVenta.Cantidad = int.Parse(txtCantidad.Text);
-            nuevaVenta.MontoPago = decimal.Parse(txtMontoPago.Text);
-            nuevaVenta.MontoCambio = decimal.Parse(txtMontoCambio.Text);
-            nuevaVenta.MontoTotal = decimal.Parse(txtMontoTotal.Text);
-            nuevaVenta.IdVenta = int.Parse(dgvVerGestionVentas.CurrentRow.Cells["idVenta"].Value.ToString());
-            nuevaVenta.ActualizarVenta(nuevaVenta);
-            MostrarInformacionDGV();
-            MessageBox.Show("Venta actualizada con éxito");
-
+            // Actualizar
+            if (ventaActualizar.ActualizarVenta(ventaActualizar))
+            {
+                MostrarInformacionDGV();
+                btnLimpiar_Click(sender, e);
+                MessageBox.Show("Venta actualizada con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnEliminarVenta_Click(object sender, EventArgs e)
@@ -275,7 +297,7 @@ namespace Sistema_de_inventario.UserControls
                 }
 
                 // Obtener ID
-                var cellValue = dgvVerGestionVentas.CurrentRow.Cells["idVenta"].Value;
+                var cellValue = dgvVerGestionVentas.CurrentRow.Cells["ID Venta"].Value;
 
                 if (cellValue == null || !int.TryParse(cellValue.ToString(), out int idVenta))
                 {
@@ -295,7 +317,7 @@ namespace Sistema_de_inventario.UserControls
 
                 
                 // Llamar método
-Ventas ventas = new Ventas();
+                Ventas ventas = new Ventas();
                 ventas.EliminarVenta(idVenta);
 
                 MessageBox.Show("Venta eliminada correctamente.");

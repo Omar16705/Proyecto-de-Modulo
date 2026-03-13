@@ -33,7 +33,7 @@ namespace Modelos.Entidades
             {
                 using (SqlConnection conn = Conexion.conectar())
                 {
-                    string query = "SELECT * FROM Proveedores";
+                    string query = "SELECT idProveedor as 'ID', documentoProveedor as 'Documento', nombreProveedor as 'Proveedor', correoProveedor as 'Correo', telefonoProveedor as 'Teléfono' FROM Proveedores";
                     SqlDataAdapter da = new SqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
@@ -45,7 +45,7 @@ namespace Modelos.Entidades
                 MessageBox.Show("Ha ocurrido un error: " + ex.Message);
                 return null;
             }
-            }
+        }
         public static DataTable ObtenerDatosProveedores()
         {
 
@@ -64,7 +64,7 @@ namespace Modelos.Entidades
                 return null;
             }
 
-       }
+        }
 
 
         public bool InsertarProveedor()

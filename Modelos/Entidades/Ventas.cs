@@ -37,7 +37,7 @@ namespace Modelos.Entidades
             try
             {
               SqlConnection conexion = Conexion.conectar();
-                string query = "SELECT * from Ventas";
+                string query = "select idVenta as 'ID Venta', usuario_id as 'ID Usuario', Usuarios.NombreCompletoUsuario as Usuario, producto_id as 'ID Producto', Productos.NombreProducto as 'Producto', tipoDocumentoVenta_id as 'ID Tipo Venta', TipoDocumentoVenta.nombreTipoDocumentoVenta as 'Tipo de documento', Cantidad, Montopago as 'Pago', MontoCambio as 'Cambio', MontoTotal as 'Total'  from Ventas\r\ninner join Usuarios on Ventas.usuario_id=Usuarios.idUsuario\r\ninner join TipoDocumentoVenta on TipoDocumentoVenta.idTipoDocumentoVenta = Ventas.tipoDocumentoVenta_id\r\ninner join Productos on Productos.idProducto=Ventas.producto_id";
                 SqlDataAdapter da = new SqlDataAdapter(query, conexion);
                 DataTable dt = new DataTable();
                 da.Fill(dt);

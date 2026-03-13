@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Sistema_de_inventario.UserControls
 {
-    public partial class frmGestionProveedores : UserControl
+    public partial class frmGestionProveedores : Form
     {
         public frmGestionProveedores()
         {
@@ -71,13 +71,24 @@ namespace Sistema_de_inventario.UserControls
             ConfigurarDataGridView();
             VerDatafrid();
         }
+        
+        Proveedores Proveedores = new Proveedores();
 
-      Proveedores Proveedores = new Proveedores();
+        private void LimpiarCampos()
+        {
+            txtDocumentoProveedor.Clear();
+            txtNombreProveedor.Clear();
+            txtEmailProveedor.Clear();
+            txtTelefonoProveedor.Clear();
+        }
 
         private void VerDatafrid()
         {
             dgvVerProveedores.DataSource = null;
             dgvVerProveedores.DataSource = Proveedores.VerProveedores();
+
+            if (dgvVerProveedores.Columns.Contains("ID"))
+                dgvVerProveedores.Columns["ID"].Visible = false;
         }
 
         Proveedores proveedores = new Proveedores();
@@ -139,6 +150,7 @@ namespace Sistema_de_inventario.UserControls
                 proveedores.InsertarProveedor();
                 VerDatafrid();
                 MessageBox.Show("Proveedor agregado.");
+                LimpiarCampos();
             }
             catch (Exception ex)
             {
@@ -148,19 +160,15 @@ namespace Sistema_de_inventario.UserControls
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            txtTelefonoProveedor.Clear();
-            txtEmailProveedor.Clear();
-            txtNombreProveedor.Clear();
-            txtDocumentoProveedor.Clear();
-
+            LimpiarCampos();
         }
 
         private void dgvVerProveedores_DoubleClick(object sender, EventArgs e)
         {
-            txtNombreProveedor.Text = dgvVerProveedores.CurrentRow.Cells["NombreProveedor"].Value.ToString();
-            txtDocumentoProveedor.Text = dgvVerProveedores.CurrentRow.Cells["DocumentoProveedor"].Value.ToString();
-            txtEmailProveedor.Text = dgvVerProveedores.CurrentRow.Cells["CorreoProveedor"].Value.ToString();
-            txtTelefonoProveedor.Text = dgvVerProveedores.CurrentRow.Cells["TelefonoProveedor"].Value.ToString();
+            txtNombreProveedor.Text = dgvVerProveedores.CurrentRow.Cells["Proveedor"].Value.ToString();
+            txtDocumentoProveedor.Text = dgvVerProveedores.CurrentRow.Cells["Documento"].Value.ToString();
+            txtEmailProveedor.Text = dgvVerProveedores.CurrentRow.Cells["Correo"].Value.ToString();
+            txtTelefonoProveedor.Text = dgvVerProveedores.CurrentRow.Cells["Teléfono"].Value.ToString();
 
         }
 
@@ -214,10 +222,11 @@ namespace Sistema_de_inventario.UserControls
                 proveedores.NombreProveedor = txtNombreProveedor.Text;
                 proveedores.CorreoProveedor = txtEmailProveedor.Text;
                 proveedores.TelefonoProveedor = txtTelefonoProveedor.Text;
-                proveedores.IdProveedor = Convert.ToInt32(dgvVerProveedores.CurrentRow.Cells["idProveedor"].Value);
+                proveedores.IdProveedor = Convert.ToInt32(dgvVerProveedores.CurrentRow.Cells["ID"].Value);
                 proveedores.ActualizarProveedor();
                 VerDatafrid();
                 MessageBox.Show("Proveedor actualizado.");
+                LimpiarCampos();
             }
             catch (Exception ex)
             {
@@ -229,7 +238,7 @@ namespace Sistema_de_inventario.UserControls
         {
             if (dgvVerProveedores.CurrentRow != null)
             {
-                int idProveedor = Convert.ToInt32(dgvVerProveedores.CurrentRow.Cells["idProveedor"].Value);
+                int idProveedor = Convert.ToInt32(dgvVerProveedores.CurrentRow.Cells["ID"].Value);
 
                 DialogResult resultado = MessageBox.Show("¿Está seguro de eliminar este proveedor y sus productos?",
                     "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -242,6 +251,7 @@ namespace Sistema_de_inventario.UserControls
                     {
                         MessageBox.Show("Proveedor y productos eliminados correctamente.");
                         VerDatafrid(); // 🔄 Recarga el DataGridView
+                        LimpiarCampos(); // 🧹 Limpia los campos de entrada
                     }
                 }
             }

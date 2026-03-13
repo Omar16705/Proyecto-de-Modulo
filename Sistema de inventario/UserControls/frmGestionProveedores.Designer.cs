@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAgregarProveedor = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -66,12 +68,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(874, 266);
+            this.panel1.Size = new System.Drawing.Size(858, 266);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnAgregarProveedor
             // 
+            this.btnAgregarProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregarProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarProveedor.Location = new System.Drawing.Point(683, 61);
             this.btnAgregarProveedor.Name = "btnAgregarProveedor";
@@ -83,6 +86,7 @@
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Location = new System.Drawing.Point(683, 215);
             this.btnLimpiar.Name = "btnLimpiar";
@@ -94,6 +98,7 @@
             // 
             // btnActualizar
             // 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.Location = new System.Drawing.Point(683, 112);
             this.btnActualizar.Name = "btnActualizar";
@@ -105,6 +110,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(683, 161);
             this.btnEliminar.Name = "btnEliminar";
@@ -116,34 +122,42 @@
             // 
             // txtTelefonoProveedor
             // 
+            this.txtTelefonoProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefonoProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoProveedor.Location = new System.Drawing.Point(268, 222);
             this.txtTelefonoProveedor.Name = "txtTelefonoProveedor";
-            this.txtTelefonoProveedor.Size = new System.Drawing.Size(319, 23);
+            this.txtTelefonoProveedor.Size = new System.Drawing.Size(368, 23);
             this.txtTelefonoProveedor.TabIndex = 8;
             // 
             // txtEmailProveedor
             // 
+            this.txtEmailProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmailProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailProveedor.Location = new System.Drawing.Point(268, 178);
             this.txtEmailProveedor.Name = "txtEmailProveedor";
-            this.txtEmailProveedor.Size = new System.Drawing.Size(319, 23);
+            this.txtEmailProveedor.Size = new System.Drawing.Size(368, 23);
             this.txtEmailProveedor.TabIndex = 7;
             // 
             // txtNombreProveedor
             // 
+            this.txtNombreProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreProveedor.Location = new System.Drawing.Point(268, 133);
             this.txtNombreProveedor.Name = "txtNombreProveedor";
-            this.txtNombreProveedor.Size = new System.Drawing.Size(319, 23);
+            this.txtNombreProveedor.Size = new System.Drawing.Size(368, 23);
             this.txtNombreProveedor.TabIndex = 6;
             // 
             // txtDocumentoProveedor
             // 
+            this.txtDocumentoProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDocumentoProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDocumentoProveedor.Location = new System.Drawing.Point(268, 87);
             this.txtDocumentoProveedor.Name = "txtDocumentoProveedor";
-            this.txtDocumentoProveedor.Size = new System.Drawing.Size(319, 23);
+            this.txtDocumentoProveedor.Size = new System.Drawing.Size(368, 23);
             this.txtDocumentoProveedor.TabIndex = 5;
             // 
             // label4
@@ -203,12 +217,28 @@
             // 
             // dgvVerProveedores
             // 
-            this.dgvVerProveedores.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvVerProveedores.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVerProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVerProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVerProveedores.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVerProveedores.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvVerProveedores.Location = new System.Drawing.Point(0, 266);
             this.dgvVerProveedores.Name = "dgvVerProveedores";
-            this.dgvVerProveedores.Size = new System.Drawing.Size(874, 270);
+            this.dgvVerProveedores.Size = new System.Drawing.Size(858, 219);
             this.dgvVerProveedores.TabIndex = 1;
             this.dgvVerProveedores.DoubleClick += new System.EventHandler(this.dgvVerProveedores_DoubleClick);
             // 
@@ -216,10 +246,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(858, 497);
             this.Controls.Add(this.dgvVerProveedores);
             this.Controls.Add(this.panel1);
             this.Name = "frmGestionProveedores";
-            this.Size = new System.Drawing.Size(874, 536);
             this.Load += new System.EventHandler(this.frmGestionProveedores_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

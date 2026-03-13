@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Sistema_de_inventario.UserControls
 {
-    public partial class frmGestionProductos : UserControl
+    public partial class frmGestionProductos : Form
     {
         public frmGestionProductos()
         {
@@ -24,6 +24,17 @@ namespace Sistema_de_inventario.UserControls
 
         }
 
+        private void LimpiarCampos()
+        {
+            txtCodProducto.Clear();
+            txtNombreProducto.Clear();
+            txtStock.Clear();
+            txtPrecioCompra.Clear();
+            txtPrecioVenta.Clear();
+            cmbCategoria.SelectedIndex = -1;
+            cbmProveedor.SelectedIndex = -1;
+        }
+
         Productos Productos = new Productos();
      
         private void frmGestionProductos_Load(object sender, EventArgs e)
@@ -31,11 +42,28 @@ namespace Sistema_de_inventario.UserControls
             VerDatagriv();
             ConfigurarDataGridView();
             MostrarComboBox();
+            // Forzar altura inicial del panel
+            this.panel1.Height = 291;
+
+            // Forzar el layout
+            this.PerformLayout();
+
+            // Suscribirse al evento Resize
+            this.Resize += frmGestionProductos_Resize;
         }
 
         private void VerDatagriv()
         {
             dgvVerProductos.DataSource = Productos.ObtenerProductos();
+            if (dgvVerProductos.Columns.Contains("ID Producto"))
+                dgvVerProductos.Columns["ID Producto"].Visible = false;
+
+            if (dgvVerProductos.Columns.Contains("ID Categoria"))
+                dgvVerProductos.Columns["ID Categoria"].Visible = false;
+
+            if (dgvVerProductos.Columns.Contains("ID Proveedor"))
+                dgvVerProductos.Columns["ID Proveedor"].Visible = false;
+
         }
 
         private void ConfigurarDataGridView()
@@ -77,18 +105,14 @@ namespace Sistema_de_inventario.UserControls
 
             // Quitar encabezado de filas
             dgvVerProductos.RowHeadersVisible = false;
+            dgvVerProductos.AutoGenerateColumns = false;
+            
+           
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            txtCodProducto.Clear();
-            txtNombreProducto.Clear();
-            txtStock.Clear();
-            txtPrecioCompra.Clear();
-            txtPrecioVenta.Clear();
-           cmbCategoria.SelectedIndex = -1;
-            cbmProveedor.SelectedIndex = -1;
-
+            LimpiarCampos();
         }
 
         Proveedores Proveedores = new Proveedores();
@@ -161,8 +185,11 @@ namespace Sistema_de_inventario.UserControls
                     return;
                 }
 
-              
-
+                // NUEVA VALIDACIÓN
+                if (!ConfirmarPrecios((float)precioCompra, (float)precioVenta))
+                {
+                    return; // Detener el proceso si el usuario no confirma
+                }
 
                 productos.CodigoProducto = txtCodProducto.Text.Trim();
                 productos.NombreProducto = txtNombreProducto.Text.Trim();
@@ -175,7 +202,11 @@ namespace Sistema_de_inventario.UserControls
                 productos.InsertarProducto();
                 VerDatagriv();
 
+                LimpiarCampos();
+
                 MessageBox.Show("Producto agregado correctamente.");
+
+                btnLimpiar_Click(sender, e); // Limpiar campos después de agregar
             }
             catch (Exception ex)
             {
@@ -230,20 +261,26 @@ namespace Sistema_de_inventario.UserControls
                     return;
                 }
 
-
+                // NUEVA VALIDACIÓN
+                if (!ConfirmarPrecios((float)precioCompra, (float)precioVenta))
+                {
+                    return; // Detener el proceso si el usuario no confirma
+                }
 
                 productos.CodigoProducto = txtCodProducto.Text.Trim();
-               productos.NombreProducto= txtNombreProducto.Text.Trim();
+                productos.NombreProducto= txtNombreProducto.Text.Trim();
                 productos.Categoria_id = Convert.ToInt32(cmbCategoria.SelectedValue);
                 productos.Proveedor_id = Convert.ToInt32(cbmProveedor.SelectedValue);
                 productos.Stock = int.Parse(txtStock.Text.Trim());
                 productos.PrecioCompra = decimal.Parse(txtPrecioCompra.Text.Trim());
                 productos.PrecioVenta = decimal.Parse(txtPrecioVenta.Text.Trim());
-                   productos.IdProducto = int.Parse(dgvVerProductos.CurrentRow.Cells["ID Producto"].Value.ToString());
+                productos.IdProducto = int.Parse(dgvVerProductos.CurrentRow.Cells["ID Producto"].Value.ToString());
 
 
                 productos.ActualizarProducto();
                 VerDatagriv();
+
+                btnLimpiar_Click(sender, e);
 
                 MessageBox.Show("Producto actualizado.");
             }
@@ -296,12 +333,37 @@ namespace Sistema_de_inventario.UserControls
                 Productos.EliminarProductoCompleto(idProducto);
 
                 MessageBox.Show("Producto eliminado correctamente.");
+                btnLimpiar_Click(sender, e); // Limpiar campos después de agregar
                 VerDatagriv();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-        }   
+        }
+
+        private bool ConfirmarPrecios(float precioCompra, float precioVenta)
+        {
+            if (precioVenta > precioCompra)
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("⚠ ADVERTENCIA: El precio de venta debe ser mayor que el precio de compra.", "Precios Incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+        }
+
+        private void frmGestionProductos_Resize(object sender, EventArgs e)
+        {
+            // Mantener el panel superior con altura fija de 300 píxeles
+            this.panel1.Height = 291;
+
+            // Asegurar que el panel permanezca en la parte superior
+            this.panel1.Dock = DockStyle.Top;
+
+            // El DataGridView con Dock Fill ocupará el resto automáticamente
+        }
     }
 }
